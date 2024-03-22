@@ -5,5 +5,10 @@
     "project_button_label": "Projects",
     "skills_and_services_button_label": "Skills & Services",
     "about_me_button_label": "About me",
-    "contact_button_label": "Contact"
+    "contact_button_label": "Contact",
+    "projects_label": "Projects",
+    "skills_label": "Skills",
+    "services_label": "Services",
+    "about_me_label": "About Me",
+    "contact_label": "Contact"
 }

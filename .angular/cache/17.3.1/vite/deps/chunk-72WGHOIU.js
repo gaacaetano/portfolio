@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-ABODR6XK.js";
+} from "./chunk-DMOXC2P7.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -5055,12 +5055,20 @@ var _MatInternalFormField = __MatInternalFormField;
 })();
 
 export {
+  Directionality,
+  BidiModule,
   Platform,
   RtlScrollAxisType,
   supportsScrollBehavior,
   getRtlScrollAxisType,
   _getEventTarget,
   _isTestEnvironment,
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
+  ObserversModule,
   ENTER,
   ESCAPE,
   SPACE,
@@ -5070,19 +5078,11 @@ export {
   DOWN_ARROW,
   A,
   hasModifierKey,
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
-  ObserversModule,
   addAriaReferencedId,
   removeAriaReferencedId,
   ActiveDescendantKeyManager,
   LiveAnnouncer,
   FocusMonitor,
-  Directionality,
-  BidiModule,
   VERSION2 as VERSION,
   AnimationCurves,
   AnimationDurations,
@@ -5129,4 +5129,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-OCP2MASE.js.map
+//# sourceMappingURL=chunk-72WGHOIU.js.map

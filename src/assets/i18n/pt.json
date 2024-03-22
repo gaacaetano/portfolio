@@ -5,5 +5,10 @@
     "project_button_label": "Projetos",
     "skills_and_services_button_label": "Skills & Serviços",
     "about_me_button_label": "Sobre mim",
-    "contact_button_label": "Contato"
+    "contact_button_label": "Contato",
+    "projects_label": "Projetos",
+    "skills_label": "Skills",
+    "services_label": "Serviços",
+    "about_me_label": "Sobre mim",
+    "contact_label": "Contato"
 }

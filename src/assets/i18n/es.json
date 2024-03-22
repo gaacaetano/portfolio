@@ -3,7 +3,12 @@
     "description_label": "Ingeniero de software con más de 8 años de experiencia y entusiasta de la tecnología.<span class='text-[#FFEDA3]'>)</span>",
     "download_resume_button_label": "Descargar el CV",
     "project_button_label": "Proyectos",
-    "skills_and_services_button_label": "Competencias y servicios",
+    "skills_and_services_button_label": "Competencias & Servicios",
     "about_me_button_label": "Sobre mí",
-    "contact_button_label": "Contacto"
+    "contact_button_label": "Contacto",
+    "projects_label": "Proyectos",
+    "skills_label": "Competencias",
+    "services_label": "Servicios",
+    "about_me_label": "Sobre mí",
+    "contact_label": "Contacto"
 }
