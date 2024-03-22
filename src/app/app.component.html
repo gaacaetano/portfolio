@@ -1,7 +1,7 @@
 <div class="h-screen bg-[#232323] flex flex-col justify-between text-zinc-400">
   <div class="flex justify-end p-4">
     <mat-form-field class="w-20">
-      <mat-select [(value)]="selectedLanguage" (selectionChange)="handleSelectionChange()">
+      <mat-select #selector [(value)]="selectedLanguage" (selectionChange)="handleSelectionChange()">
         <mat-select-trigger>
           <img src="{{ selectedLanguage.imageUrl }}" class="h-4">
         </mat-select-trigger>
