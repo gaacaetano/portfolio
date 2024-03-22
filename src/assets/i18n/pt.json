@@ -1,0 +1,9 @@
+{
+    "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Olá mundo, meu nome é <span class='font-bold text-2xl'>Gabriel Caetano.</span>   ",
+    "description_label": "Engenheiro de Software com mais de 8 anos de experiência e entusiasta da tecnologia.<span class='text-[#FFEDA3]'>)</span>",
+    "download_resume_button_label": "Baixar Currículo",
+    "project_button_label": "Projetos",
+    "skills_and_services_button_label": "Skills & Serviços",
+    "about_me_button_label": "Sobre mim",
+    "contact_button_label": "Contato"
+}
