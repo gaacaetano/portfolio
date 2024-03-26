@@ -33,28 +33,28 @@
     </div>
 
     <div
-      class="min-[320px]:mt-12 lg:ml-auto lg:mt-0 min-[320px]:w-full lg:w-2/6 min-[320px]:flex md:grid lg:flex min-[320px]:flex-col md:grid-cols-2 xl:flex-row md:place-items-center min-[320px]:items-center xl:flex-wrap gap-12">
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+      class="min-[320px]:mt-12 lg:ml-auto lg:mt-0 lg:w-2/6 min-[320px]:grid lg:flex min-[320px]:grid-cols-2 lg:flex-row min-[425px]:place-items-center lg:items-center lg:flex-wrap gap-12">
+      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
         (click)="goToProjectsSection()">
-        <mat-icon class="scale-[3] mb-12">code</mat-icon>
+        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">code</mat-icon>
         {{ 'project_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
         (click)="goToSkillsAndServicesSection()">
-        <mat-icon class="scale-[3] mb-12">lightbulb_outlined</mat-icon>
+        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">lightbulb_outlined</mat-icon>
         {{ 'skills_and_services_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
         (click)="goToAboutMeSection()">
-        <mat-icon class="scale-[3] mb-12">person_outlined</mat-icon>
+        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">person_outlined</mat-icon>
         {{ 'about_me_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
         (click)="goToContactSection()">
-        <mat-icon class="scale-[3] mb-12">mail_outlined</mat-icon>
+        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">mail_outlined</mat-icon>
         {{ 'contact_button_label' | translate }}
       </button>
     </div>
