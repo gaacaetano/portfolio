@@ -7,8 +7,12 @@
     "about_me_button_label": "About me",
     "contact_button_label": "Contact",
     "projects_label": "Projects",
-    "skills_label": "Skills",
-    "services_label": "Services",
+    "skills_services": {
+        "skills_label": "Skills",
+        "services_label": "Services",
+        "integrations_services_label": "System Integration",
+        "responsive_sites": "Responsive Sites"
+    },
     "about_me_label": "About Me",
     "contact_label": "Contact"
 }

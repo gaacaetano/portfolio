@@ -7,8 +7,12 @@
     "about_me_button_label": "Sobre mim",
     "contact_button_label": "Contato",
     "projects_label": "Projetos",
-    "skills_label": "Skills",
-    "services_label": "Serviços",
+    "skills_services": {
+        "skills_label": "Skills",
+        "services_label": "Serviços",
+        "integrations_services_label": "Integração de Sistemas",
+        "responsive_sites": "Sites Responsivos"
+    },
     "about_me_label": "Sobre mim",
     "contact_label": "Contato"
 }
