@@ -6,13 +6,24 @@
     "skills_and_services_button_label": "Competencias & Servicios",
     "about_me_button_label": "Sobre mí",
     "contact_button_label": "Contacto",
-    "projects_label": "Proyectos",
-    "skills_services": {
+    "projects_section": {
+        "title": "Proyectos"
+    },
+    "skills_services_section": {
         "skills_label": "Competencias",
         "services_label": "Servicios",
         "integrations_services_label": "Integración de Sistemas",
         "responsive_sites": "Sitios Web Responsivos"
     },
-    "about_me_label": "Sobre mí",
-    "contact_label": "Contacto"
+    "contact_section": {
+        "title": "Contacto",
+        "subject": "Tema",
+        "message": "Mensaje",
+        "character_count": "Cant. Caracteres:",
+        "send": "Enviar",
+        "made_by": "Desarrollado por"
+    },
+    "about_me_section": {
+        "title": "Sobre mí"
+    }
 }

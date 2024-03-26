@@ -6,13 +6,24 @@
     "skills_and_services_button_label": "Skills & Serviços",
     "about_me_button_label": "Sobre mim",
     "contact_button_label": "Contato",
-    "projects_label": "Projetos",
-    "skills_services": {
+    "projects_section": {
+        "title": "Projetos"
+    },
+    "skills_services_section": {
         "skills_label": "Skills",
         "services_label": "Serviços",
         "integrations_services_label": "Integração de Sistemas",
         "responsive_sites": "Sites Responsivos"
     },
-    "about_me_label": "Sobre mim",
-    "contact_label": "Contato"
+    "contact_section": {
+        "title": "Contato",
+        "subject": "Assunto",
+        "message": "Mensagem",
+        "character_count": "Qtde. Caracteres:",
+        "send": "Enviar",
+        "made_by": "Desenvolvido por"
+    },
+    "about_me_section": {
+        "title": "Sobre mim"
+    }
 }
