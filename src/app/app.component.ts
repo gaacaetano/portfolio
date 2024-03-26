@@ -60,14 +60,14 @@ export class AppComponent {
   ngOnInit() {
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && window.innerWidth >= 1920) {
           entry.target.classList.add('animate-fade-in-left');
           return;
         }
 
         entry.target.classList.remove('animate-fade-in-left');
       });
-    });
+    }, { threshold: 0.01 });
 
     document.querySelectorAll('.effect-div').forEach(target => {
       observer.observe(target);
