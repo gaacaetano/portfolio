@@ -67,7 +67,7 @@ export class AppComponent {
 
         entry.target.classList.remove('animate-fade-in-left');
       });
-    }, { threshold: 0.01 });
+    });
 
     document.querySelectorAll('.effect-div').forEach(target => {
       observer.observe(target);
