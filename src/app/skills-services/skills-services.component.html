@@ -1,9 +1,9 @@
-<div id="skills-services" class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col text-black">
-    <div class="flex flex-col min-[320px]:p-4 lg:p-12">
+<div id="skills-services" class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col text-black select-none">
+    <div class="flex flex-col min-[320px]:p-4 lg:p-12 effect-div">
         <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">{{ 'skills_services_section.skills_label' | translate }}</h1>
 
         <div class="flex justify-center gap-4 mt-12">
-            <div class="flex justify-center w-1/2 gap-4 flex-wrap">
+            <div class="flex justify-center min-[1920px]:w-1/2 gap-4 flex-wrap">
                 @for(skill of skills; track skill) {
                 <div class="min-[320px]:h-14 md:h-28 min-[320px]:w-14 md:w-28 bg-[#232323] flex items-center justify-center rounded-lg">
                     <img [src]="skill.imageUrl" class="min-[320px]:h-8 md:h-16" title="{{skill.skill}}">
@@ -17,17 +17,17 @@
         </h1>
 
         <div class="flex justify-center items-center flex-wrap gap-6 mt-12 text-[#FFEDA3]">
-            <div class="min-[320px]:h-32 md:h-64 min-[320px]:w-10/12 md:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 md:p-12 rounded-lg shadow-2xl shadow-[#232323]">
-                <mat-icon class="min-[320px]:text-4xl md:text-7xl h-auto w-auto">cloud_outlined</mat-icon>
-                <span class="min-[320px]:mt-4 md:mt-12 min-[320px]:text-md md:text-xl">API's</span>
+            <div class="min-[320px]:h-32 lg:h-64 min-[320px]:w-10/12 md:w-5/12 lg:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 lg:p-12 rounded-lg shadow-2xl shadow-[#232323]">
+                <mat-icon class="min-[320px]:text-4xl lg:text-7xl h-auto w-auto">cloud_outlined</mat-icon>
+                <span class="min-[320px]:mt-4 lg:mt-12 min-[320px]:text-md lg:text-xl">API's</span>
             </div>
-            <div class="min-[320px]:h-32 md:h-64 min-[320px]:w-10/12 md:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 md:p-12 rounded-lg shadow-2xl shadow-[#232323]">
-                <mat-icon class="min-[320px]:text-4xl md:text-7xl h-auto w-auto">integration_instructions_outlined</mat-icon>
-                <span class="min-[320px]:mt-4 md:mt-12 min-[320px]:text-xs md:text-xl">{{ 'skills_services_section.integrations_services_label' | translate }}</span>
+            <div class="min-[320px]:h-32 lg:h-64 min-[320px]:w-10/12 md:w-5/12 lg:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 lg:p-12 rounded-lg shadow-2xl shadow-[#232323]">
+                <mat-icon class="min-[320px]:text-4xl lg:text-7xl h-auto w-auto">integration_instructions_outlined</mat-icon>
+                <span class="min-[320px]:mt-4 lg:mt-12 min-[320px]:text-xs lg:text-xl">{{ 'skills_services_section.integrations_services_label' | translate }}</span>
             </div>
-            <div class="min-[320px]:h-32 md:h-64 min-[320px]:w-10/12 md:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 md:p-12 rounded-lg shadow-2xl shadow-[#232323]">
-                <mat-icon class="min-[320px]:text-4xl md:text-7xl h-auto w-auto">devices</mat-icon>
-                <span class="min-[320px]:mt-4 md:mt-12 min-[320px]:text-xs md:text-xl">{{ 'skills_services_section.responsive_sites' | translate }}</span>
+            <div class="min-[320px]:h-32 lg:h-64 min-[320px]:w-10/12 md:w-5/12 lg:w-96 bg-[#232323] flex flex-col min-[320px]:p-6 lg:p-12 rounded-lg shadow-2xl shadow-[#232323]">
+                <mat-icon class="min-[320px]:text-4xl lg:text-7xl h-auto w-auto">devices</mat-icon>
+                <span class="min-[320px]:mt-4 lg:mt-12 min-[320px]:text-xs lg:text-xl">{{ 'skills_services_section.responsive_sites' | translate }}</span>
             </div>
         </div>
     </div>

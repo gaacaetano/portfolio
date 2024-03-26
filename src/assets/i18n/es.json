@@ -24,6 +24,9 @@
         "made_by": "Desarrollado por"
     },
     "about_me_section": {
-        "title": "Sobre mí"
+        "title": "Sobre mí",
+        "description_p1": "Hola, mi nombre es Gabriel Caetano, tengo {{value}} años y más de 8 años de experiencia en desarrollo de software. Desde que era un niño, me encantan los ordenadores y desde el comienzo de mi carrera, me he zambullido de cabeza en el desarrollo, siempre en busca de nuevos retos y oportunidades para innovar en el campo de la tecnología.",
+        "description_p2": "Siempre estoy experimentando con nuevas herramientas, explorando nuevos lenguajes y realizando proyectos personales para poder ampliar y mejorar mis habilidades y conocimientos en el área.",
+        "description_p3": "Además de la parte técnica, siempre busco mejorar mis habilidades de comunicación y colaborar con todas las personas con las que trabajo, lo que me permite adaptarme a cualquier entorno en el que me encuentre."
     }
 }

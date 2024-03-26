@@ -24,6 +24,9 @@
         "made_by": "Developed by"
     },
     "about_me_section": {
-        "title": "About Me"
+        "title": "About Me",
+        "description_p1": "Hello, my name is Gabriel Caetano, I'm {{value}} years old and I have over 8 years of experience in software development. Ever since I was little, I've loved computers and since the beginning of my career, I've dived headfirst into development, always looking for new challenges and opportunities to innovate in the field of technology.",
+        "description_p2": "I'm always experimenting with new tools, exploring new languages and carrying out personal projects so that I can expand and improve my skills and knowledge in the area.",
+        "description_p3": "As well as the technical side, I'm always looking to improve my communication skills and collaborate with everyone I work with, allowing me to adapt to any environment I'm in."
     }
 }

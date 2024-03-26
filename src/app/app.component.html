@@ -1,4 +1,5 @@
-<div id="main" class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-[#232323] flex flex-col justify-between text-zinc-400">
+<div id="main"
+  class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-[#232323] flex flex-col justify-between text-zinc-400 select-none">
   <div class="flex justify-end p-4">
     <mat-form-field class="w-20">
       <mat-select #selector [(value)]="selectedLanguage" (selectionChange)="handleSelectionChange()">
@@ -33,36 +34,40 @@
 
     <div
       class="min-[320px]:mt-12 lg:ml-auto lg:mt-0 min-[320px]:w-full lg:w-2/6 min-[320px]:flex md:grid lg:flex min-[320px]:flex-col md:grid-cols-2 xl:flex-row md:place-items-center min-[320px]:items-center xl:flex-wrap gap-12">
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52" (click)="goToProjectsSection()">
+      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+        (click)="goToProjectsSection()">
         <mat-icon class="scale-[3] mb-12">code</mat-icon>
         {{ 'project_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52" (click)="goToSkillsAndServicesSection()">
+      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+        (click)="goToSkillsAndServicesSection()">
         <mat-icon class="scale-[3] mb-12">lightbulb_outlined</mat-icon>
         {{ 'skills_and_services_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52" (click)="goToAboutMeSection()">
+      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+        (click)="goToAboutMeSection()">
         <mat-icon class="scale-[3] mb-12">person_outlined</mat-icon>
         {{ 'about_me_button_label' | translate }}
       </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52" (click)="goToContactSection()">
+      <button mat-stroked-button class="flex flex-col items-center justify-center w-52 h-52"
+        (click)="goToContactSection()">
         <mat-icon class="scale-[3] mb-12">mail_outlined</mat-icon>
         {{ 'contact_button_label' | translate }}
       </button>
     </div>
   </div>
 
-  <div class="flex flex-row min-[320px]:mt-12 lg:mt-auto justify-center gap-4 pb-6">
-    <a href="https://github.com/gaacaetano" class="rounded-full bg-[#191919] h-12 w-12 flex items-center justify-center"
-      target="_blank">
+  <div class="flex flex-row min-[320px]:mt-12 lg:mt-auto justify-center gap-4 pb-6 animate-bounce">
+    <a href="https://github.com/gaacaetano"
+      class="rounded-full bg-black h-12 w-12 flex items-center justify-center" target="_blank">
       <img class="h-6" src="../assets/github.png" />
     </a>
 
     <a href="https://www.linkedin.com/in/gaacaetano"
-      class="rounded-full bg-[#191919] h-12 w-12 flex items-center justify-center" target="_blank">
+      class="rounded-full bg-black h-12 w-12 flex items-center justify-center" target="_blank">
       <img class="h-6" src="../assets/linkedin.png" />
     </a>
   </div>
@@ -77,7 +82,7 @@
 <app-contact></app-contact>
 
 @if (!isMainSelected) {
-  <button mat-fab (click)="goToTop()" class="fixed right-4 bottom-4 z-50 bg-[#424242]">
-    <mat-icon class="text-black">expand_less</mat-icon>
-  </button>
+<button mat-fab (click)="goToTop()" class="fixed right-4 bottom-4 z-50 bg-[#424242]">
+  <mat-icon class="text-black">expand_less</mat-icon>
+</button>
 }
