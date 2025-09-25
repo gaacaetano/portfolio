@@ -4,7 +4,32 @@
 @tailwind utilities;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Garantir que ocupe 100% da tela em dispositivos móveis */
+@media screen and (max-width: 768px) {
+  html, body {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  #main {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
+
+/* Específico para iPhone 13 Pro Max */
+@media screen and (max-width: 428px) and (max-height: 926px) {
+  html, body, #main {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+}
 
 h1, span, p {
     font-family: 'JetBrains Mono';
