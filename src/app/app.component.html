@@ -1,5 +1,5 @@
 <div id="main"
-  class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-[#232323] flex flex-col justify-between text-zinc-400 select-none">
+  class="h-full lg:h-fit min-[1920px]:h-full bg-[#232323] flex flex-col justify-between text-zinc-400 select-none">
   <div class="flex justify-end p-4">
     <mat-form-field class="w-20">
       <mat-select #selector [(value)]="selectedLanguage" (selectionChange)="handleSelectionChange()">
@@ -26,10 +26,10 @@
 
       <h1 class="text-[#FFEDA3] text-2xl mt-3">{{ '}' }}</h1>
 
-      <a [href]="cvLinkSelected" target="_blank" mat-raised-button class="mt-12">
+      <!-- <a [href]="cvLinkSelected" target="_blank" mat-raised-button class="mt-12">
         <mat-icon>download</mat-icon>
         {{ 'download_resume_button_label' | translate }}
-      </a>
+      </a> -->
     </div>
 
     <div

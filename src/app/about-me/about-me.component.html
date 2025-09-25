@@ -1,21 +1,20 @@
 <div id="about-me"
-    class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col justify-between text-black">
-    <div class="flex flex-col min-[320px]:p-4 lg:p-12 effect-div h-full">
-        <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">{{ 'about_me_section.title' |
-            translate
-            }}
+    class="h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col text-black justify-between select-none">
+    <div class="flex flex-col min-[320px]:p-4 lg:p-12 effect-div justify-center">
+        <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">
+            {{ 'about_me_section.title' |translate }}
         </h1>
 
         <div class="flex min-[320px]:flex-col lg:flex-row items-center mt-12">
-            <img [src]="'../../assets/me.jpeg'" class="overflow-hidden rounded-full shadow-2xl shadow-[#232323] h-auto min-[320px]:w-2/5 md:w-3/5 lg:w-fit xl:w-3/5">
+            <img [src]="'../../assets/me.jpeg'" class="overflow-hidden rounded-full shadow-2xl shadow-[#232323] h-auto min-[320px]:w-2/5 lg:w-fit xl:w-3/5">
             <div class="lg:ml-12 min-[320px]:mt-12 lg:mt-0">
-                <p class="min-[320px]:text-xs md:text-xl">
+                <p class="min-[320px]:text-xs md:text-lg lg:text-xl">
                     {{ 'about_me_section.description_p1' | translate:years }}
                 </p>
-                <p class="min-[320px]:text-xs md:text-xl mt-6">
+                <p class="min-[320px]:text-xs md:text-lg lg:text-xl mt-6">
                     {{ 'about_me_section.description_p2' | translate:years }}
                 </p>
-                <p class="min-[320px]:text-xs md:text-xl mt-6">
+                <p class="min-[320px]:text-xs md:text-lg lg:text-xl mt-6">
                     {{ 'about_me_section.description_p3' | translate:years }}
                 </p>
             </div>

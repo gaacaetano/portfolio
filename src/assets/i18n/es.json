@@ -2,12 +2,14 @@
     "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Hola mundo, me llamo <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>",
     "description_label": "Ingeniero de software con más de 8 años de experiencia y entusiasta de la tecnología.<span class='text-[#FFEDA3]'>)</span>",
     "download_resume_button_label": "Descargar el CV",
-    "project_button_label": "Proyectos",
+    "project_button_label": "Proyectos & Empresas",
     "skills_and_services_button_label": "Competencias & Servicios",
     "about_me_button_label": "Sobre mí",
     "contact_button_label": "Contacto",
-    "projects_section": {
-        "title": "Proyectos"
+    "projects_companies_section": {
+        "projects_label": "Proyectos",
+        "companies_label": "Empresas",
+        "company_label": "Empresa"
     },
     "skills_services_section": {
         "skills_label": "Competencias",

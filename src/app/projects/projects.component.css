@@ -1,0 +1,143 @@
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fade animation keyframes */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.92);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.carousel-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+
+.carousel-content.fading {
+  opacity: 0;
+}
+
+.carousel-content.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade in animation for new content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.carousel-button {
+  background: rgba(120, 113, 108, 0.9);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover:not(:disabled) {
+  background: rgba(120, 113, 108, 1);
+  transform: scale(1.1);
+}
+
+.carousel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-indicators button {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: none;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+.carousel-indicators button:hover {
+  background-color: rgba(120, 113, 108, 0.7) !important;
+  transform: scale(1.2);
+}
+
+.carousel-indicators button.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(120, 113, 108, 0.4);
+}
+
+/* Project content centering */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+/* Project image styles */
+.project-image {
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Technology text centering */
+.technology-row {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-button {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .carousel-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

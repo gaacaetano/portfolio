@@ -1,9 +1,74 @@
 <div id="projects"
-    class="h-fit md:h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col justify-between text-black select-none">
+    class="h-full lg:h-fit min-[1920px]:h-full bg-stone-300 flex flex-col justify-between text-black select-none">
     <div class="flex flex-col min-[320px]:p-4 lg:p-12 effect-div">
-        <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">{{ 'projects_section.title' |
-            translate
-            }}
+        <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">
+            {{ 'projects_companies_section.projects_label' | translate }}
         </h1>
+
+        <div class="flex justify-center mt-12">
+            <!-- Carousel Container -->
+            <div class="carousel-container relative w-full max-w-4xl flex items-center justify-center">
+                <!-- Previous Button -->
+                <button
+                    (click)="previousProject()"
+                    class="carousel-button absolute left-4 z-10 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    [disabled]="projects.length <= 1">
+                    &#8249;
+                </button>
+
+                <!-- Project Display -->
+                <div class="carousel-content project-content gap-4 px-20 w-full"
+                     [class.fading]="isFading"
+                     [class.fade-in]="!isFading"
+                     [attr.data-trigger]="animationTrigger">
+                    <div class="flex justify-center w-full">
+                        <div class="min-[320px]:h-8 md:h-96 min-[320px]:w-48 md:w-auto flex items-center justify-center rounded-lg">
+                            <img [src]="currentProject.imageUrl" class="project-image min-[320px]:h-48 md:h-auto rounded-lg">
+                        </div>
+                    </div>
+                    <h3 class="min-[320px]:text-xs md:text-xl font-bold text-center w-full min-[320px]:mt-8 md:mt-0">{{currentProject.name}}</h3>
+                    <div class="text-center w-full">
+                        @for(row of getTechnologiesInRows(currentProject.technologies); track $index) {
+                        <p class="technology-row min-[320px]:text-xs md:text-xs break-words">{{row.join(', ')}}</p>
+                        }
+                    </div>
+                </div>
+
+                <!-- Next Button -->
+                <button
+                    (click)="nextProject()"
+                    class="carousel-button absolute right-4 z-10 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    [disabled]="projects.length <= 1">
+                    &#8250;
+                </button>
+            </div>
+        </div>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators flex justify-center gap-2 mt-6" *ngIf="projects.length > 1">
+            @for(i of projects; track $index) {
+            <button
+                (click)="goToProject($index)"
+                class="w-3 h-3 rounded-full"
+                [class.active]="currentProjectIndex === $index"
+                [class.bg-stone-700]="currentProjectIndex === $index"
+                [class.bg-stone-500]="currentProjectIndex !== $index">
+            </button>
+            }
+        </div>
+
+        <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center min-[320px]:mt-24 lg:mt-28">
+            {{ 'projects_companies_section.companies_label' | translate }}
+        </h1>
+
+        <div class="flex justify-center gap-4 mt-12">
+            <div class="flex justify-center min-[1920px]:w-1/2 min-[320px]:gap-2 lg:gap-12 flex-wrap">
+                @for(company of companies; track company) {
+                <div class="min-[320px]:h-28 min-[320px]:w-28 flex items-center justify-center rounded-lg">
+                    <img [src]="company.imageUrl" class="min-[320px]:h-28 md:h-20 lg:h-28" title="{{company.name}}">
+                </div>
+                }
+            </div>
+        </div>
     </div>
 </div>

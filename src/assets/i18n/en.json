@@ -2,12 +2,14 @@
     "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Hello world, my name is <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>",
     "description_label": "Software engineer with over 8 years' experience and technology enthusiast.<span class='text-[#FFEDA3]'>)</span>",
     "download_resume_button_label": "Download Resume",
-    "project_button_label": "Projects",
+    "project_button_label": "Projects & Companies",
     "skills_and_services_button_label": "Skills & Services",
     "about_me_button_label": "About me",
     "contact_button_label": "Contact",
-    "projects_section": {
-        "title": "Projects"
+    "projects_companies_section": {
+        "projects_label": "Projects",
+        "companies_label": "Companies",
+        "company_label": "Company"
     },
     "skills_services_section": {
         "skills_label": "Skills",

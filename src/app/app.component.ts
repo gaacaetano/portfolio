@@ -1,5 +1,4 @@
 import { Component, HostListener, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,7 +19,6 @@ interface Language {
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     TranslateModule,
     ProjectsComponent,
     SkillsServicesComponent,
@@ -30,7 +28,7 @@ interface Language {
     MatIconModule,
     MatFormFieldModule,
     MatSelectModule
-  ],
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -91,42 +89,61 @@ export class AppComponent {
   }
 
   goToProjectsSection() {
-    document.getElementById("projects")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    const element = document.getElementById("projects");
+    if (element) {
+      this.smoothScrollTo(element.offsetTop, 1500);
+    }
   }
 
   goToSkillsAndServicesSection() {
-    document.getElementById("skills-services")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    const element = document.getElementById("skills-services");
+    if (element) {
+      this.smoothScrollTo(element.offsetTop, 1500);
+    }
   }
 
   goToAboutMeSection() {
-    document.getElementById("about-me")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    const element = document.getElementById("about-me");
+    if (element) {
+      this.smoothScrollTo(element.offsetTop, 1500);
+    }
   }
 
   goToContactSection() {
-    document.getElementById("contact")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    const element = document.getElementById("contact");
+    if (element) {
+      this.smoothScrollTo(element.offsetTop, 1500);
+    }
   }
 
   goToTop() {
-    document.getElementById("main")!.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
+    const element = document.getElementById("main");
+    if (element) {
+      this.smoothScrollTo(element.offsetTop, 1500); // 1.5 segundos
+    }
+  }
+
+  private smoothScrollTo(targetPosition: number, duration: number = 1000) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const startTime = performance.now();
+
+    const easeInOutCubic = (t: number) => {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    };
+
+    const animation = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = easeInOutCubic(progress);
+
+      window.scrollTo(0, startPosition + distance * easeProgress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
   }
 }
