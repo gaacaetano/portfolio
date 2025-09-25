@@ -105,7 +105,8 @@ export class AppComponent {
   goToAboutMeSection() {
     const element = document.getElementById("about-me");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500);
+      const targetPosition = this.getMobileAdjustedScrollPosition(element);
+      this.smoothScrollTo(targetPosition, 1500);
     }
   }
 
@@ -121,6 +122,46 @@ export class AppComponent {
     if (element) {
       this.smoothScrollTo(element.offsetTop, 1500); // 1.5 segundos
     }
+  }
+
+  private getMobileAdjustedScrollPosition(element: HTMLElement): number {
+    // Usar getBoundingClientRect para calcular posição mais precisa
+    const rect = element.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Calcular a posição absoluta do elemento
+    let targetPosition = rect.top + scrollTop;
+
+    // Verificar se estamos em um dispositivo móvel
+    const isMobile = window.innerWidth <= 768 && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // Usar Visual Viewport API se disponível (mais precisa para barras de navegação móveis)
+      const visualViewport = (window as any).visualViewport;
+
+      if (visualViewport) {
+        // Calcular offset baseado na diferença entre viewport total e visual
+        const totalHeight = window.innerHeight;
+        const visualHeight = visualViewport.height;
+        const topOffset = visualViewport.offsetTop || 0;
+
+        // Calcular quanto espaço está ocupado pelas barras
+        const barsHeight = totalHeight - visualHeight;
+        const topBarHeight = topOffset;
+
+        // Ajustar posição considerando as barras
+        // Para about-me, queremos garantir que não haja sobreposição visual
+        const safetyMargin = Math.max(visualHeight * 0.1, 60); // 10% da altura visual ou mínimo 60px
+
+        targetPosition = Math.max(0, targetPosition - topBarHeight - safetyMargin);
+      } else {
+        // Fallback para dispositivos sem Visual Viewport API
+        const fallbackOffset = Math.max(window.innerHeight * 0.15, 80);
+        targetPosition = Math.max(0, targetPosition - fallbackOffset);
+      }
+    }
+
+    return targetPosition;
   }
 
   private smoothScrollTo(targetPosition: number, duration: number = 1000) {
