@@ -112,15 +112,6 @@
   text-align: center;
 }
 
-/* Project image styles */
-.project-image {
-  transition: all 0.3s ease;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-
 /* Technology text centering */
 .technology-row {
   text-align: center;
@@ -154,11 +145,5 @@
   .carousel-content {
     padding-left: 60px;
     padding-right: 60px;
-  }
-
-  /* Improve touch target size on mobile */
-  .carousel-indicators button {
-    min-width: 12px;
-    min-height: 12px;
   }
 }
