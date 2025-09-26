@@ -128,6 +128,21 @@
   display: block;
 }
 
+/* Touch/Swipe enhancements for mobile */
+.carousel-content {
+  touch-action: pan-y pinch-zoom; /* Allow vertical scroll but detect horizontal swipes */
+  user-select: none; /* Prevent text selection during swipe */
+}
+
+.carousel-content:active {
+  cursor: grabbing;
+}
+
+/* Prevent bounce/elastic scrolling on iOS during swipe */
+.carousel-container {
+  overscroll-behavior: contain;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .carousel-button {
@@ -139,5 +154,11 @@
   .carousel-content {
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  /* Improve touch target size on mobile */
+  .carousel-indicators button {
+    min-width: 12px;
+    min-height: 12px;
   }
 }

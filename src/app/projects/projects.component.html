@@ -1,5 +1,5 @@
 <div id="projects"
-    class="min-h-svh bg-stone-300 flex flex-col text-black select-none">
+    class="min-h-dvh bg-stone-300 flex flex-col text-black select-none">
     <div class="flex flex-col min-[320px]:p-4 lg:p-12 effect-div">
         <h1 class="min-[320px]:text-xs md:text-2xl font-bold flex justify-center">
             {{ 'projects_companies_section.projects_label' | translate }}
@@ -20,13 +20,18 @@
                 <div class="carousel-content project-content gap-4 px-20 w-full"
                      [class.fading]="isFading"
                      [class.fade-in]="!isFading"
-                     [attr.data-trigger]="animationTrigger">
+                     [attr.data-trigger]="animationTrigger"
+                     (touchstart)="onTouchStart($event)"
+                     (touchmove)="onTouchMove($event)"
+                     (touchend)="onTouchEnd($event)">
                     <div class="flex justify-center w-full">
                         <div class="min-[320px]:h-8 md:h-96 min-[320px]:w-48 md:w-auto flex items-center justify-center rounded-lg">
-                            <img [src]="currentProject.imageUrl" class="project-image min-[320px]:h-48 md:h-auto rounded-lg">
+                            <img [src]="currentProject.imageUrl" class="project-image min-[320px]:h-96 md:h-auto rounded-lg">
                         </div>
                     </div>
-                    <h3 class="min-[320px]:text-xs md:text-xl font-bold text-center w-full min-[320px]:mt-8 md:mt-0">{{currentProject.name}}</h3>
+                    <h3 class="min-[320px]:text-xs md:text-xl font-bold text-center w-full min-[320px]:mt-8 md:mt-0">
+                        {{currentProject.name}} - {{currentProject.company}}
+                    </h3>
                     <div class="text-center w-full">
                         @for(row of getTechnologiesInRows(currentProject.technologies); track $index) {
                         <p class="technology-row min-[320px]:text-xs md:text-xs break-words">{{row.join(', ')}}</p>

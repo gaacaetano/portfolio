@@ -105,8 +105,7 @@ export class AppComponent {
   goToAboutMeSection() {
     const element = document.getElementById("about-me");
     if (element) {
-      const targetPosition = this.getMobileAdjustedScrollPosition(element);
-      this.smoothScrollTo(targetPosition, 1500);
+      this.smoothScrollTo(element.offsetTop, 1500);
     }
   }
 
@@ -121,79 +120,6 @@ export class AppComponent {
     const element = document.getElementById("main");
     if (element) {
       this.smoothScrollTo(element.offsetTop, 1500); // 1.5 segundos
-    }
-  }
-
-  private getMobileAdjustedScrollPosition(element: HTMLElement): number {
-    // Usar getBoundingClientRect para calcular posição mais precisa
-    const rect = element.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    // Calcular a posição absoluta do elemento
-    let targetPosition = rect.top + scrollTop;
-
-    // Verificar se estamos em um dispositivo móvel com navegador
-    const isMobileBrowser = window.innerWidth <= 768 &&
-      (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-       /Safari|iPhone|iPad|iPod/.test(navigator.userAgent)); // Detectar Safari mobile
-
-    if (isMobileBrowser) {
-      // Pequeno delay para garantir que as barras do navegador estabilizaram
-      // Isso é importante porque as barras aparecem/desaparecem dinamicamente
-      setTimeout(() => {
-        this.adjustForDynamicBars(element);
-      }, 100);
-
-      // Usar Visual Viewport API se disponível (mais precisa para barras de navegação móveis)
-      const visualViewport = (window as any).visualViewport;
-
-      if (visualViewport) {
-        // Calcular considerando as barras atuais do navegador
-        const visualHeight = visualViewport.height;
-        const pageHeight = window.innerHeight;
-
-        // Diferença indica quanto espaço está ocupado pelas barras do navegador
-        const browserBarsHeight = pageHeight - visualHeight;
-
-        // Offset adicional para compensar mudanças dinâmicas das barras
-        const dynamicOffset = Math.max(visualHeight * 0.12, 70); // 12% da altura visual ou mínimo 70px
-
-        // Ajustar posição considerando barras do navegador + margem de segurança
-        targetPosition = Math.max(0, targetPosition - browserBarsHeight - dynamicOffset);
-
-        console.log('Mobile scroll adjustment:', {
-          visualHeight,
-          pageHeight,
-          browserBarsHeight,
-          dynamicOffset,
-          finalPosition: targetPosition
-        });
-      } else {
-        // Fallback mais agressivo para navegadores sem Visual Viewport API
-        const fallbackOffset = Math.max(window.innerHeight * 0.18, 100); // 18% da altura ou mínimo 100px
-        targetPosition = Math.max(0, targetPosition - fallbackOffset);
-      }
-    }
-
-    return targetPosition;
-  }
-
-  private adjustForDynamicBars(element: HTMLElement): void {
-    // Listener adicional para mudanças na viewport (barras aparecendo/desaparecendo)
-    const visualViewport = (window as any).visualViewport;
-    if (visualViewport) {
-      const handleViewportChange = () => {
-        // Se as barras mudarem dinamicamente, poderíamos re-ajustar
-        // Por enquanto, apenas log para debug
-        console.log('Viewport changed:', {
-          height: visualViewport.height,
-          width: visualViewport.width,
-          offsetTop: visualViewport.offsetTop
-        });
-      };
-
-      visualViewport.addEventListener('resize', handleViewportChange);
-      visualViewport.addEventListener('scroll', handleViewportChange);
     }
   }
 

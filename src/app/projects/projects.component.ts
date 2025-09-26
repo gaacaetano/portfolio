@@ -26,10 +26,12 @@ interface Project {
 })
 export class ProjectsComponent {
   projects: Project[] = [
-    { name: 'Manager Platform', company: 'Connekt', imageUrl: '../../assets/projects/manager_platform.jpg', technologies: 'Java, Spring Boot, MySQL, Jenkins, Angular, AWS' },
+    { name: 'Manager Platform', company: 'Connekt', imageUrl: '../../assets/projects/connekt_platform.jpg', technologies: 'Java, Spring Boot, MySQL, Jenkins, Angular, AWS' },
     { name: 'Passenger Service System (PSS)', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, Oracle, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
     { name: 'WhatsApp Worker', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, MongoDB, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
-    { name: 'Consult Miles', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, MongoDB, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' }
+    { name: 'Consult Miles', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, MongoDB, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
+    { name: 'Cadastro Único (CADU)', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, Oracle, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
+    { name: 'Sistema de Gestão Educacional', company: 'R3+ TopTech', imageUrl: '../../assets/projects/r3_platform.jpg', technologies: '.NET Core, Oracle, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' }
   ];
 
   companies: CompanyImage[] = [
@@ -44,6 +46,14 @@ export class ProjectsComponent {
   currentProjectIndex = 0;
   animationTrigger = 0;
   isFading = false;
+
+  // Touch/Swipe properties
+  private touchStartX = 0;
+  private touchStartY = 0;
+  private touchEndX = 0;
+  private touchEndY = 0;
+  private minSwipeDistance = 50; // Minimum distance for swipe detection
+  private maxVerticalDistance = 100; // Maximum vertical movement allowed for horizontal swipe
 
   get currentProject(): Project {
     return this.projects[this.currentProjectIndex];
@@ -86,6 +96,48 @@ export class ProjectsComponent {
     setTimeout(() => {
       this.isFading = false;
     }, 50);
+  }
+
+  // Touch/Swipe methods
+  onTouchStart(event: TouchEvent): void {
+    this.touchStartX = event.touches[0].clientX;
+    this.touchStartY = event.touches[0].clientY;
+  }
+
+  onTouchMove(event: TouchEvent): void {
+    // Prevent scrolling while detecting swipe
+    if (this.isSwipeGesture()) {
+      event.preventDefault();
+    }
+  }
+
+  onTouchEnd(event: TouchEvent): void {
+    this.touchEndX = event.changedTouches[0].clientX;
+    this.touchEndY = event.changedTouches[0].clientY;
+
+    this.handleSwipeGesture();
+  }
+
+  private isSwipeGesture(): boolean {
+    const deltaX = Math.abs(this.touchStartX - this.touchEndX);
+    const deltaY = Math.abs(this.touchStartY - this.touchEndY);
+    return deltaX > this.minSwipeDistance && deltaY < this.maxVerticalDistance;
+  }
+
+  private handleSwipeGesture(): void {
+    const deltaX = this.touchEndX - this.touchStartX;
+    const deltaY = Math.abs(this.touchEndY - this.touchStartY);
+
+    // Only handle horizontal swipes
+    if (Math.abs(deltaX) > this.minSwipeDistance && deltaY < this.maxVerticalDistance) {
+      if (deltaX > 0) {
+        // Swipe right - go to previous project
+        this.previousProject();
+      } else {
+        // Swipe left - go to next project
+        this.nextProject();
+      }
+    }
   }
 
   getTechnologiesInRows(technologies: string): string[][] {
