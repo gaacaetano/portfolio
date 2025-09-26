@@ -31,7 +31,7 @@ export class ProjectsComponent {
     { name: 'WhatsApp Worker', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, MongoDB, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
     { name: 'Consult Miles', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, MongoDB, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
     { name: 'Cadastro Único (CADU)', company: 'GOL', imageUrl: '../../assets/projects/default.webp', technologies: '.NET Core, Oracle, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' },
-    { name: 'Sistema de Gestão Educacional', company: 'R3+ TopTech', imageUrl: '../../assets/projects/r3_platform.jpg', technologies: '.NET Core, Oracle, Docker, Azure DevOps, Azure Pipelines, OKE, Checkmarx' }
+    { name: 'Sistema de Gestão Educacional', company: 'R3+ TopTech', imageUrl: '../../assets/projects/r3_platform.jpg', technologies: '.NET Core, Dapper, PostgreSQL, React, Azure Pipelines' }
   ];
 
   companies: CompanyImage[] = [
