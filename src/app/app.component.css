@@ -1,0 +1,66 @@
+/* Hero Section Buttons */
+:host ::ng-deep .mat-mdc-outlined-button {
+  border-color: rgba(255, 237, 163, 0.5) !important;
+  color: #FFEDA3 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 16px !important;
+}
+
+:host ::ng-deep .mat-mdc-outlined-button:hover {
+  border-color: #FFEDA3 !important;
+  background: rgba(255, 237, 163, 0.1) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(255, 237, 163, 0.2);
+}
+
+/* Social Links */
+.social-link {
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Language Selector */
+:host ::ng-deep .language-selector .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+:host ::ng-deep .language-selector .mdc-notched-outline__leading,
+:host ::ng-deep .language-selector .mdc-notched-outline__notch,
+:host ::ng-deep .language-selector .mdc-notched-outline__trailing {
+  border-color: rgba(255, 237, 163, 0.3) !important;
+}
+
+/* Back to Top Button */
+:host ::ng-deep .mat-mdc-fab {
+  transition: all 0.3s ease !important;
+}
+
+:host ::ng-deep .mat-mdc-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 237, 163, 0.3) !important;
+}
+
+/* Code Block Styling */
+.code-block {
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid rgba(255, 237, 163, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .hero-text h1 {
+    font-size: 0.875rem;
+  }
+}
+
+/* Remove bounce animation - too distracting */
+.social-container {
+  animation: none;
+}

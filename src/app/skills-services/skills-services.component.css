@@ -1,0 +1,28 @@
+/* Service Icons */
+.service-icon {
+  font-size: 64px !important;
+  width: 64px !important;
+  height: 64px !important;
+}
+
+@media (min-width: 768px) {
+  .service-icon {
+    font-size: 80px !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-icon {
+    font-size: 96px !important;
+    width: 96px !important;
+    height: 96px !important;
+  }
+}
+
+/* Service Card Hover */
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

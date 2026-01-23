@@ -1,70 +1,97 @@
 <div id="main"
-  class="min-h-dvh bg-[#232323] flex flex-col justify-between text-zinc-400 select-none overflow-hidden">
-  <div class="flex justify-end p-4">
-    <mat-form-field class="w-20">
+  class="min-h-dvh bg-gradient-to-br from-[#232323] via-[#1a1a1a] to-[#232323] flex flex-col justify-between text-zinc-400 select-none overflow-hidden relative">
+  
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5 pointer-events-none"
+       style="background-image: radial-gradient(circle at 25% 25%, #FFEDA3 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
+
+  <!-- Header with Language Selector -->
+  <div class="flex justify-between items-center p-4 md:p-6 relative z-10">
+    <div class="text-[#FFEDA3] font-mono text-sm md:text-lg font-bold tracking-wider">
+      &lt;GC/&gt;
+    </div>
+    <mat-form-field class="w-20 language-selector">
       <mat-select #selector [(value)]="selectedLanguage" (selectionChange)="handleSelectionChange()">
         <mat-select-trigger>
-          <img src="{{ selectedLanguage.imageUrl }}" class="h-4">
+          <img src="{{ selectedLanguage.imageUrl }}" class="h-5 w-5 rounded-sm">
         </mat-select-trigger>
         @for(language of languages; track language) {
         <mat-option [value]="language">
-          <img src="{{ language.imageUrl }}" class="h-4" />
+          <img src="{{ language.imageUrl }}" class="h-5 w-5 rounded-sm" />
         </mat-option>
         }
       </mat-select>
     </mat-form-field>
   </div>
 
-  <div
-    class="flex min-[320px]:flex-col lg:flex-row min-[320px]:text-sm lg:text-base mt-auto items-center min-[320px]:px-4 lg:px-24 xl:px-48">
-    <div class="min-[320px]:p-4 md:p-0 min-[320px]:w-full md:w-4/6 lg:w-3/6">
-      <h1 class="text-[#FFEDA3] min-[320px]:text-xs lg:text-2xl">{{ 'if (SoftwareEngineering()) {' }}</h1>
+  <!-- Main Content -->
+  <div class="flex flex-col lg:flex-row text-sm lg:text-base items-center px-4 md:px-12 lg:px-24 xl:px-32 gap-8 lg:gap-16 relative z-10 flex-1 justify-center">
+    
+    <!-- Code Block Section -->
+    <div class="w-full lg:w-1/2 max-w-xl">
+      <div class="code-block bg-[#1a1a1a]/90 border border-[#FFEDA3]/20 rounded-xl p-6 md:p-8 shadow-2xl backdrop-blur-sm">
+        <!-- Terminal Header -->
+        <div class="flex items-center gap-2 mb-4 pb-4 border-b border-[#FFEDA3]/10">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          <span class="ml-3 text-[#FFEDA3]/60 text-xs font-mono">gabriel-caetano.cs</span>
+        </div>
+        
+        <h1 class="text-[#FFEDA3] text-xs md:text-lg lg:text-xl font-mono">
+          {{ 'if (SoftwareEngineering())' }}
+        </h1>
 
-      <h1 class="ml-4 mt-3" [innerHTML]="'welcome_label' | translate"></h1>
+        <h1 class="text-[#FFEDA3] text-lg md:text-xl lg:text-2xl mt-4 font-mono">{{ '{' }}</h1>
 
-      <h1 class="ml-4 mt-12" [innerHTML]="'description_label' | translate"></h1>
+        <div class="ml-4 mt-4 font-mono" [innerHTML]="'welcome_label' | translate"></div>
 
-      <h1 class="text-[#FFEDA3] text-2xl mt-3">{{ '}' }}</h1>
+        <div class="ml-4 mt-8 md:mt-10 font-mono" [innerHTML]="'description_label' | translate"></div>
+
+        <h1 class="text-[#FFEDA3] text-lg md:text-xl lg:text-2xl mt-4 font-mono">{{ '}' }}</h1>
+      </div>
     </div>
 
-    <div
-      class="min-[320px]:mt-12 lg:ml-auto lg:mt-0 lg:w-2/6 min-[320px]:grid lg:flex min-[320px]:grid-cols-2 lg:flex-row min-[425px]:place-items-center lg:items-center lg:flex-wrap gap-12">
-      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
-        (click)="goToProjectsSection()">
-        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">code</mat-icon>
-        {{ 'project_button_label' | translate }}
-      </button>
+    <!-- Navigation Buttons -->
+    <div class="w-full lg:w-1/2 max-w-lg font-mono">
+      <div class="grid grid-cols-2 gap-4 md:gap-6">
+        <button mat-stroked-button 
+          class="flex flex-col items-center justify-center w-full h-36 md:h-44 lg:h-48 p-4"
+          (click)="goToProjectsSection()">
+          <mat-icon class="scale-[2] md:scale-[2.5] mb-3 md:mb-4">code</mat-icon>
+          <span class="text-xs md:text-sm text-center leading-tight">{{ 'project_button_label' | translate }}</span>
+        </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
-        (click)="goToSkillsAndServicesSection()">
-        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">lightbulb_outlined</mat-icon>
-        {{ 'skills_and_services_button_label' | translate }}
-      </button>
+        <button mat-stroked-button 
+          class="flex flex-col items-center justify-center w-full h-36 md:h-44 lg:h-48 p-4"
+          (click)="goToSkillsAndServicesSection()">
+          <mat-icon class="scale-[2] md:scale-[2.5] mb-3 md:mb-4">lightbulb_outlined</mat-icon>
+          <span class="text-xs md:text-sm text-center leading-tight">{{ 'skills_and_services_button_label' | translate }}</span>
+        </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
-        (click)="goToAboutMeSection()">
-        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">person_outlined</mat-icon>
-        {{ 'about_me_button_label' | translate }}
-      </button>
+        <button mat-stroked-button 
+          class="flex flex-col items-center justify-center w-full h-36 md:h-44 lg:h-48 p-4"
+          (click)="goToAboutMeSection()">
+          <mat-icon class="scale-[2] md:scale-[2.5] mb-3 md:mb-4">person_outlined</mat-icon>
+          <span class="text-xs md:text-sm text-center leading-tight">{{ 'about_me_button_label' | translate }}</span>
+        </button>
 
-      <button mat-stroked-button class="flex flex-col items-center justify-center min-[320px]:w-32 min-[425px]:w-40 md:w-52 min-[320px]:h-32 min-[425px]:h-40 md:h-52"
-        (click)="goToContactSection()">
-        <mat-icon class="min-[320px]:scale-[2] md:scale-[3] min-[320px]:mb-6 md:mb-12">mail_outlined</mat-icon>
-        {{ 'contact_button_label' | translate }}
-      </button>
+        <button mat-stroked-button 
+          class="flex flex-col items-center justify-center w-full h-36 md:h-44 lg:h-48 p-4"
+          (click)="goToContactSection()">
+          <mat-icon class="scale-[2] md:scale-[2.5] mb-3 md:mb-4">mail_outlined</mat-icon>
+          <span class="text-xs md:text-sm text-center leading-tight">{{ 'contact_button_label' | translate }}</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="flex flex-row min-[320px]:mt-8 md:mt-6 lg:mt-auto justify-center gap-4 pb-6 animate-bounce">
-    <a href="https://github.com/gaacaetano"
-      class="rounded-full bg-black h-12 w-12 flex items-center justify-center" target="_blank">
-      <img class="h-6" src="../assets/github.png" />
-    </a>
-
-    <a href="https://www.linkedin.com/in/gaacaetano"
-      class="rounded-full bg-black h-12 w-12 flex items-center justify-center" target="_blank">
-      <img class="h-6" src="../assets/linkedin.png" />
-    </a>
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50">
+    <div class="w-5 h-8 border-2 border-[#FFEDA3]/50 rounded-full flex justify-center pt-1">
+      <div class="w-1 h-2 bg-[#FFEDA3] rounded-full animate-bounce"></div>
+    </div>
   </div>
 </div>
 
