@@ -72,7 +72,7 @@ export class AppComponent {
     });
   }
 
-  @HostListener('document:scroll', ['$event'])
+  @HostListener('document:scroll')
   public onViewportScroll() {
     let position: [number, number] = this.scroller.getScrollPosition();
     if (position[0] == 0 && position[1] == 0) {

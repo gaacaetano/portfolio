@@ -22,6 +22,8 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
+  currentYear = new Date().getFullYear();
+
   form = new FormGroup({
     subject: new FormControl('', [Validators.required]),
     message: new FormControl('', [Validators.required])
