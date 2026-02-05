@@ -91,39 +91,39 @@ export class AppComponent {
   goToProjectsSection() {
     const element = document.getElementById("projects");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500);
+      this.smoothScrollTo(element.offsetTop, 500);
     }
   }
 
   goToSkillsAndServicesSection() {
     const element = document.getElementById("skills-services");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500);
+      this.smoothScrollTo(element.offsetTop, 500);
     }
   }
 
   goToAboutMeSection() {
     const element = document.getElementById("about-me");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500);
+      this.smoothScrollTo(element.offsetTop, 500);
     }
   }
 
   goToContactSection() {
     const element = document.getElementById("contact");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500);
+      this.smoothScrollTo(element.offsetTop, 500);
     }
   }
 
   goToTop() {
     const element = document.getElementById("main");
     if (element) {
-      this.smoothScrollTo(element.offsetTop, 1500); // 1.5 segundos
+      this.smoothScrollTo(element.offsetTop, 500); // 1.5 segundos
     }
   }
 
-  private smoothScrollTo(targetPosition: number, duration: number = 1000) {
+  private smoothScrollTo(targetPosition: number, duration: number = 500) {
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     const startTime = performance.now();
