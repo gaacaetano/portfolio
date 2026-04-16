@@ -91,7 +91,7 @@ export const projectEntries: ProjectEntry[] = [
     company: 'D7 Innovation',
     imageUrl: '../../assets/projects/d7_project.jpg',
     tags: ['.NET Core', 'Angular', 'Azure Pipelines'],
-    summaryKey: 'projects_section.items.education_platform.summary',
+    summaryKey: 'projects_section.items.ebr.summary',
     featured: true
   },
   {

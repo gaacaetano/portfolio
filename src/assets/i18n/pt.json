@@ -34,22 +34,25 @@
         "summary": "Extensão para VS Code que automatiza o ciclo de migrações do Entity Framework Core, eliminando comandos repetitivos via formulários guiados e detecção automática de DbContext em soluções .NET."
       },
       "manager_platform": {
-        "summary": "Desenvolvido a Manager Platform, funcionalidade central do ecossistema de recrutamento 100% digital da Connekt — uma plataforma de HR tech que permite às empresas automatizar e personalizar processos seletivos de ponta a ponta, incluindo jornadas de candidatos com testes, entrevistas e matching com inteligência artificial."
+        "summary": "Desenvolvida a Manager Platform, funcionalidade central do ecossistema de recrutamento 100% digital da Connekt — uma plataforma de HR tech que permite às empresas automatizar e personalizar processos seletivos de ponta a ponta, incluindo jornadas de candidatos com testes, entrevistas e matching com inteligência artificial."
       },
       "education_platform": {
-        "summary": "Sistema de gestão educacional com backend em .NET Core, persistência em PostgreSQL e camada React para suportar jornadas administrativas."
+        "summary": "Sistema completo de gestão educacional voltado para servidores públicos — professores, docentes, alunos e responsáveis. A plataforma centraliza o gerenciamento de matrículas, organização de aulas e controle de presença por meio de diário digital, permitindo o acompanhamento em tempo real das atividades acadêmicas. Projetado para atender às demandas da educação pública, o sistema melhora a comunicação entre escola e família, ao mesmo tempo em que otimiza os fluxos administrativos para educadores e servidores."
       },
       "pss": {
-        "summary": "Desenvolvido a ProfileSync API, um componente backend crítico para o projeto de migração de PSS da GOL Linhas Aéreas, de Navitaire para Sabre — garantindo sincronização e gestão em tempo real dos perfis de clientes no site e canais digitais da companhia durante uma das maiores transições de sistema do setor aéreo na América Latina."
+        "summary": "Desenvolvida a ProfileSync API, um componente backend crítico para o projeto de migração de PSS da GOL Linhas Aéreas, de Navitaire para Sabre — garantindo sincronização e gestão em tempo real dos perfis de clientes no site e nos canais digitais da companhia durante uma das maiores transições de sistema do setor aéreo na América Latina."
       },
       "whatsapp_worker": {
-        "summary": "Desenvolvido um robusto worker em background para o ecossistema GOL Linhas Aéreas / Smiles, consultando histórico de compras, status de check-in e dados relacionados aos passageiros em aplicações internas (plataforma de fidelidade Smiles, Sabre PSS e sistemas GOL), encaminhando-os de forma segura a uma API externa que alimenta um bot no WhatsApp para notificações proativas, atendimento personalizado e experiências fluidas ao cliente."
+        "summary": "Desenvolvido um robusto worker em segundo plano para o ecossistema GOL Linhas Aéreas / Smiles, consultando histórico de compras, status de check-in e dados relacionados aos passageiros em aplicações internas (plataforma de fidelidade Smiles, Sabre PSS e sistemas GOL), encaminhando-os de forma segura a uma API externa que alimenta um bot no WhatsApp para notificações proativas, atendimento personalizado e experiências fluidas ao cliente."
       },
       "consult_miles": {
         "summary": "Desenvolvido e mantido um conjunto de APIs especializadas para consulta e entrega de saldos de milhas Smiles em tempo real, como parte das melhorias no programa de fidelidade Smiles Fidelidade da GOL Linhas Aéreas — possibilitando acesso preciso e seguro aos dados de milhagem dos usuários para integrações web, app, bot e parceiros."
       },
       "cadu": {
-        "summary": "Sistema CADU reorganizado como card editorial, preservando a stack já cadastrada e marcando apenas os complementos que ainda dependem de conteúdo adicional."
+        "summary": "Iniciativa da GOL Linhas Aéreas para unificar a autenticação das plataformas GOL e Smiles em um login único (SSO), simplificando a experiência do usuário e centralizando o gerenciamento de identidade para milhões de clientes em ambos os ecossistemas."
+      },
+      "ebr": {
+        "summary": "Sistema EBR (Registro Eletrônico de Lotes) para indústrias farmacêuticas reguladas, digitalizando todo o ciclo produtivo — do recebimento de matéria-prima e cálculos de dosagem até o empacotamento final — com validação por QR code garantindo rastreabilidade completa e conformidade regulatória (ANVISA/FDA)."
       }
     }
   },

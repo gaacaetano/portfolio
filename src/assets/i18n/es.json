@@ -34,13 +34,13 @@
         "summary": "Extensión para VS Code que automatiza el ciclo de migraciones de Entity Framework Core, eliminando comandos repetitivos mediante formularios guiados y detección automática de DbContext en soluciones .NET."
       },
       "manager_platform": {
-        "summary": "PDesarrollado la Manager Platform, funcionalidad central del ecosistema de reclutamiento 100% digital de Connekt — una plataforma de HR tech que permite a las empresas automatizar y personalizar procesos de selección de extremo a extremo, incluyendo jornadas de candidatos con pruebas, entrevistas y matching con inteligencia artificial."
+        "summary": "Desarrollada la Manager Platform, funcionalidad central del ecosistema de reclutamiento 100% digital de Connekt — una plataforma de HR tech que permite a las empresas automatizar y personalizar procesos de selección de extremo a extremo, incluyendo recorridos de candidatos con pruebas, entrevistas y matching con inteligencia artificial."
       },
       "education_platform": {
-        "summary": "Sistema de gestión educativa con backend en .NET Core, persistencia en PostgreSQL y una capa React para recorridos administrativos."
+        "summary": "sistema completo de gestión educacional orientado a servidores públicos — docentes, profesores, alumnos y responsables. La plataforma centraliza la gestión de matrículas, organización de clases y control de asistencia mediante un diario digital, permitiendo el seguimiento en tiempo real de las actividades académicas. Diseñado para satisfacer las demandas de la educación pública, el sistema mejora la comunicación entre la escuela y las familias, al tiempo que optimiza los flujos administrativos para educadores y servidores."
       },
       "pss": {
-        "summary": "Desarrollado la ProfileSync API, un componente backend crítico para el proyecto de migración de PSS de GOL Airlines, de Navitaire a Sabre — asegurando la sincronización y gestión en tiempo real de los perfiles de clientes en el sitio web y canales digitales de la aerolínea durante una de las mayores transiciones de sistema en la aviación de América Latina."
+        "summary": "Desarrollada la ProfileSync API, un componente backend crítico para el proyecto de migración de PSS de GOL Airlines, de Navitaire a Sabre — asegurando la sincronización y gestión en tiempo real de los perfiles de clientes en el sitio web y en los canales digitales de la aerolínea durante una de las mayores transiciones de sistema en la aviación de América Latina."
       },
       "whatsapp_worker": {
         "summary": "Desarrollado un robusto worker en background para el ecosistema GOL Linhas Aéreas / Smiles, consultando historial de compras, estado de check-in y datos relacionados a los pasajeros en aplicaciones internas (plataforma de fidelidad Smiles, Sabre PSS y sistemas GOL), enviándolos de forma segura a una API externa que alimenta un bot de WhatsApp para notificaciones proactivas, asistencia personalizada y experiencias fluidas para el cliente."
@@ -49,7 +49,10 @@
         "summary": "Desarrollado y mantenido un conjunto de APIs especializadas para la consulta y entrega de saldos de millas Smiles en tiempo real, como parte de las mejoras al programa de fidelidad Smiles Fidelidade de GOL Airlines — permitiendo un acceso preciso y seguro a los datos de millaje de los usuarios para integraciones web, app, bot y socios."
       },
       "cadu": {
-        "summary": "Sistema CADU reformulado como tarjeta editorial, preservando la stack actual y marcando solo los complementos que todavía dependen de contenido adicional."
+        "summary": "Iniciativa de GOL Líneas Aéreas para unificar la autenticación de las plataformas GOL y Smiles en un inicio de sesión único (SSO), simplificando la experiencia del usuario y centralizando la gestión de identidad para millones de clientes en ambos ecosistemas."
+      },
+      "ebr": {
+        "summary": "Sistema EBR (Registro Electrónico de Lotes) para industrias farmacéuticas reguladas, digitalizando todo el ciclo productivo — desde la recepción de materia prima y cálculos de dosificación hasta el empaquetado final — con validación por QR code garantizando trazabilidad completa y cumplimiento regulatorio (ANVISA/FDA)."
       }
     }
   },
@@ -107,7 +110,7 @@
         }
       },
       "d7": {
-        "summary": "Trabajé como desarrollador fullstack en un sistema de gestión de línea de producción farmacéutica, cubriendo todo el flujo de fabricación — desde la recepción de materia prima, pesaje y cálculos de dosificación hasta el empaquetado final. Implementé validación mediante tags QR code para garantizar trazabilidad, precisión y control de calidad a lo largo de todo el proceso productivo.",
+        "summary": "Trabajé como desarrollador fullstack en un sistema de gestión de línea de producción farmacéutica, cubriendo todo el flujo de fabricación — desde la recepción de materia prima, pesaje y cálculos de dosificación hasta el empaquetado final. Implementé validación mediante etiquetas con código QR para garantizar trazabilidad, precisión y control de calidad a lo largo de todo el proceso productivo.",
         "role_1": {
           "title": "Desarrollador Fullstack",
           "period": "Período del cargo pendiente"
@@ -152,7 +155,7 @@
     "title_pattern": "Construyendo sistemas [[resilientes]]\n para la\nweb moderna.",
     "intro": "El bloque final reúne manifiesto personal, competencias centrales, arsenal técnico y canales de contacto dentro del mismo ritmo editorial definido por el concepto adjunto.",
     "competencies_eyebrow": "Competencias Principales",
-    "competencies_title": "El arquitectura detrás de la entrega.",
+    "competencies_title": "La arquitectura detrás de la entrega.",
     "stack_eyebrow": "Arsenal Técnico",
     "stack_title": "Herramientas y plataformas del día a día.",
     "contact_eyebrow": "¿Construimos Algo Juntos?",
@@ -184,7 +187,7 @@
       },
       "security_auth": {
         "title": "Seguridad & Autenticación",
-        "description": "Implementación de arquitecturas zero-trust, protocolos de transmisión segura de datos y flujos de autenticación robustos."
+        "description": "Implementación de arquitecturas de confianza cero, protocolos de transmisión segura de datos y flujos de autenticación robustos."
       }
     }
   }

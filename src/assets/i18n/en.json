@@ -37,7 +37,7 @@
         "summary": "Developed the Manager Platform, a core feature of Connekt's 100% digital recruitment ecosystem — an HR tech platform that enables companies to automate and customize end-to-end hiring processes, including candidate journeys with tests, interviews, and AI-driven matching."
       },
       "education_platform": {
-        "summary": "Educational management system with a .NET Core backend, PostgreSQL persistence, and a React layer supporting administrative journeys."
+        "summary": "Comprehensive educational management system for public sector users — teachers, administrative staff, students, and guardians. The platform centralizes enrollment management, class scheduling, and attendance tracking through a digital diary, enabling real-time monitoring of academic activities. Designed to meet the demands of the public education sector, the system improves communication between schools and families while streamlining administrative workflows for educators and staff."
       },
       "pss": {
         "summary": "Developed the ProfileSync API, a critical backend component for GOL Airlines' PSS migration project from Navitaire to Sabre — ensuring seamless, real-time synchronization and management of customer profiles across the airline's website and digital channels during one of the largest airline system transitions in Latin America."
@@ -46,10 +46,13 @@
         "summary": "Developed a robust background worker (background service) for GOL Linhas Aéreas / Smiles ecosystem, querying purchase history, check-in status, and related passenger data from internal applications (Smiles loyalty platform, Sabre PSS, and GOL systems), then securely forwarding it to an external API that feeds a WhatsApp bot for proactive notifications, personalized assistance, and seamless customer experiences."
       },
       "consult_miles": {
-        "summary": "Developed and maintain a set of specialized APIs for querying and delivering Smiles miles balances in real-time, as part of enhancements to GOL Airlines' Smiles Fidelidade loyalty program — enabling accurate, secure access to user mileage data for web, app, bot, and partner integrations."
+        "summary": "Developed and maintained a set of specialized APIs for querying and delivering Smiles miles balances in real time, as part of enhancements to GOL Airlines' Smiles Fidelidade loyalty program — enabling accurate, secure access to user mileage data for web, app, bot, and partner integrations."
       },
       "cadu": {
-        "summary": "CADU system reframed as an editorial card, preserving the current stack and marking only the complements that still depend on extra content."
+        "summary": "GOL Airlines initiative to unify authentication across GOL and Smiles platforms into a single sign-on (SSO) solution, simplifying the user experience and centralizing identity management for millions of customers across both ecosystems."
+      },
+      "ebr": {
+        "summary": "EBR (Electronic Batch Record) system for regulated pharmaceutical industries, digitizing the entire production lifecycle — from raw material intake and dosage calculations to final packaging — with QR code validation ensuring full traceability and regulatory compliance (ANVISA/FDA)."
       }
     }
   },
@@ -93,7 +96,7 @@
         }
       },
       "connekt": {
-        "summary": "Full-stack developer on a end-to-end digital recruitment platform, building both manager dashboards and candidate-facing interfaces. Backend developed with Java, Spring and Maven; frontend with Angular and React. Managed MySQL databases, deployed cloud infrastructure on AWS and Azure, and established CI/CD pipelines with Jenkins to automate builds and accelerate delivery cycles.",
+        "summary": "Full-stack developer on an end-to-end digital recruitment platform, building both manager dashboards and candidate-facing interfaces. Backend developed with Java, Spring, and Maven; frontend with Angular and React. Managed MySQL databases, deployed cloud infrastructure on AWS and Azure, and established CI/CD pipelines with Jenkins to automate builds and accelerate delivery cycles.",
         "role_1": {
           "title": "Fullstack Developer",
           "period": "Role timeframe pending"
@@ -184,7 +187,7 @@
       },
       "security_auth": {
         "title": "Security & Auth",
-        "description": "Implemeting zero-trust architectures, secure data transmission protocols and robust authentication flows."
+        "description": "Implementing zero-trust architectures, secure data transmission protocols, and robust authentication flows."
       }
     }
   }
