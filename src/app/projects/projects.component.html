@@ -1,104 +1,52 @@
-<div id="projects"
-    class="min-h-dvh bg-gradient-to-b from-stone-200 to-stone-300 flex flex-col text-black select-none py-16 md:py-20">
-    <div class="flex flex-col px-4 md:px-8 lg:px-12 effect-div">
-        
-        <!-- Section Title -->
-        <div class="text-center mb-12 md:mb-16">
-            <h1 class="text-xl md:text-3xl lg:text-4xl font-bold section-title">
-                {{ 'projects_companies_section.projects_label' | translate }}
-            </h1>
-        </div>
-
-        <!-- Projects Carousel -->
-        <div class="flex justify-center">
-            <div class="carousel-container w-full max-w-5xl flex items-center justify-center">
-                <!-- Previous Button -->
-                <button
-                    (click)="previousProject()"
-                    class="carousel-button absolute left-2 md:left-4 z-10 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                    [disabled]="projects.length <= 1">
-                    &#8249;
-                </button>
-
-                <!-- Project Card -->
-                <div class="carousel-content project-content gap-6 px-12 md:px-20 w-full"
-                     [class.fading]="isFading"
-                     [class.fade-in]="!isFading"
-                     [attr.data-trigger]="animationTrigger"
-                     (touchstart)="onTouchStart($event)"
-                     (touchmove)="onTouchMove($event)"
-                     (touchend)="onTouchEnd($event)">
-                    
-                    <!-- Project Image -->
-                    <div class="flex justify-center w-full">
-                        <div class="project-image-container bg-white rounded-xl shadow-xl overflow-hidden">
-                            <img [src]="currentProject.imageUrl" 
-                                 [alt]="currentProject.name"
-                                 class="h-48 md:h-72 lg:h-96 w-auto object-cover">
-                        </div>
-                    </div>
-                    
-                    <!-- Project Info -->
-                    <div class="text-center mt-6">
-                        <h3 class="text-lg md:text-2xl font-bold text-[#232323]">
-                            {{currentProject.name}}
-                        </h3>
-                        <p class="text-sm md:text-base text-stone-600 mt-1">
-                            {{currentProject.company}}
-                        </p>
-                    </div>
-                    
-                    <!-- Technologies -->
-                    <div class="flex justify-center mt-4">
-                        <p class="text-xs md:text-sm text-stone-600 bg-stone-200/80 px-4 py-2 rounded-lg text-center max-w-md">
-                            {{currentProject.technologies}}
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Next Button -->
-                <button
-                    (click)="nextProject()"
-                    class="carousel-button absolute right-2 md:right-4 z-10 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                    [disabled]="projects.length <= 1">
-                    &#8250;
-                </button>
-            </div>
-        </div>
-
-        <!-- Indicators -->
-        <div class="carousel-indicators flex justify-center gap-3 mt-8" *ngIf="projects.length > 1">
-            @for(i of projects; track $index) {
-            <button
-                (click)="goToProject($index)"
-                class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300"
-                [class.active]="currentProjectIndex === $index"
-                [class.bg-[#FFEDA3]]="currentProjectIndex === $index"
-                [class.scale-125]="currentProjectIndex === $index"
-                [class.bg-stone-400]="currentProjectIndex !== $index">
-            </button>
-            }
-        </div>
-
-        <!-- Companies Section -->
-        <div class="mt-20 md:mt-28">
-            <div class="text-center mb-12">
-                <h1 class="text-xl md:text-3xl lg:text-4xl font-bold section-title">
-                    {{ 'projects_companies_section.companies_label' | translate }}
-                </h1>
-            </div>
-
-            <div class="flex justify-center">
-                <div class="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-8 max-w-4xl">
-                    @for(company of companies; track company) {
-                    <div class="company-card h-20 w-20 md:h-28 md:w-28 bg-white flex items-center justify-center rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-3">
-                        <img [src]="company.imageUrl" 
-                             [title]="company.name"
-                             class="max-h-full max-w-full object-contain">
-                    </div>
-                    }
-                </div>
-            </div>
-        </div>
+<section id="projects" class="section-shell projects-shell">
+  <div class="section-container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{{ 'projects_section.eyebrow' | translate }}</p>
+        <h2 class="section-title-display projects-title">
+          <span>{{ 'projects_section.title_line_1' | translate }}</span>
+          <span class="projects-title-muted">{{ 'projects_section.title_line_2' | translate }}</span>
+        </h2>
+        <p class="section-copy mt-4">{{ 'projects_section.description' | translate }}</p>
+      </div>
     </div>
-</div>
+
+    <div class="projects-grid">
+      @for (project of projects; track project.name) {
+      <article class="project-card" [class.project-card-featured]="project.featured">
+        <div class="project-visual">
+          <img [src]="project.imageUrl" [alt]="project.name">
+          <div class="project-visual-overlay"></div>
+        </div>
+
+        <div class="project-body">
+          <div class="project-header">
+            <p class="project-company">{{ project.company }}</p>
+            <h3 class="project-name">{{ project.name }}</h3>
+          </div>
+
+          <p class="project-summary">{{ project.summaryKey | translate }}</p>
+
+          <div class="project-tags">
+            @for (tag of project.tags; track tag) {
+            <span class="project-tag">{{ tag }}</span>
+            }
+          </div>
+
+          @if (project.link) {
+          <a
+            class="project-link"
+            [href]="project.link"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{ 'projects_section.view_link' | translate }}
+          </a>
+          } @else {
+          <div class="project-meta-note">{{ 'projects_section.pending_link' | translate }}</div>
+          }
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

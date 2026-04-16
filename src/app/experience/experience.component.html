@@ -1,0 +1,84 @@
+<section id="experience" class="section-shell experience-shell">
+  <div class="section-container">
+    <div class="section-heading timeline-heading">
+      <div>
+        <p class="eyebrow">{{ 'experience_section.eyebrow' | translate }}</p>
+        <h2 class="section-title-display timeline-title">
+          <span>{{ 'experience_section.title_line_1' | translate }}</span>
+          <span class="timeline-title-muted">{{ 'experience_section.title_line_2' | translate }}</span>
+        </h2>
+        <p class="section-copy mt-4">{{ 'experience_section.description' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      @for (group of timelineGroups; track group.periodKey; let index = $index) {
+      <article [class]="groupClasses(group, index)">
+        <div class="timeline-node" [class.timeline-node-current]="groupHasCurrentEntry(group)" aria-hidden="true"></div>
+
+        <div class="timeline-group-content">
+          <div class="timeline-group-cards" [class.timeline-group-cards-shared]="group.entries.length > 1">
+            @for (experience of group.entries; track experience.company) {
+            <section [class]="companyCardClasses(experience)">
+              <header class="timeline-company-header">
+                <div class="timeline-company-leading">
+                  <div class="timeline-company-logos">
+                    @for (logo of experience.logos; track logo.name) {
+                    <img [src]="logo.imageUrl" [alt]="logo.name" class="timeline-company-logo">
+                    }
+                  </div>
+
+                  <div class="timeline-company-copy">
+                    <p class="timeline-period">{{ resolveOverallPeriod(experience) }}</p>
+                    <h3 class="timeline-company">{{ experience.companyDisplayName || experience.company }}</h3>
+                  </div>
+                </div>
+
+                <div class="timeline-company-badges">
+                  @if (experience.employmentType || experience.employmentTypeKey) {
+                  <span class="timeline-role-badge">
+                    {{ resolveText(experience.employmentType, experience.employmentTypeKey) }}
+                  </span>
+                  }
+
+                  @if (experience.pending) {
+                  <span class="timeline-role-badge timeline-role-badge-pending">
+                    {{ 'experience_section.pending_badge' | translate }}
+                  </span>
+                  }
+                </div>
+              </header>
+
+              <div class="timeline-company-meta">
+                @if (experience.summary || experience.summaryKey) {
+                <p class="timeline-company-summary">
+                  {{ resolveText(experience.summary, experience.summaryKey) }}
+                </p>
+                }
+              </div>
+
+              <div class="timeline-roles">
+                @for (role of experience.roles; track $index) {
+                <section [class]="roleCardClasses(role)">
+                  <p class="timeline-role-period">{{ resolveRolePeriod(role) }}</p>
+
+                  <p class="timeline-role">{{ resolveText(role.title, role.titleKey) }}</p>
+
+                  @if (role.highlightValue && role.highlightLabelKey) {
+                  <div class="timeline-highlight">
+                    <span class="timeline-highlight-value">{{ role.highlightValue }}</span>
+                    <span class="timeline-highlight-label">{{ role.highlightLabelKey | translate }}</span>
+                  </div>
+                  }
+                </section>
+                }
+              </div>
+            </section>
+            }
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>

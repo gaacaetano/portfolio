@@ -1,34 +1,191 @@
 {
-    "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Olá mundo, meu nome é <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>   ",
-    "description_label": "Engenheiro de Software com mais de 8 anos de experiência e entusiasta da tecnologia.<span class='text-[#FFEDA3]'>)</span>",
-    "download_resume_button_label": "Baixar Currículo",
-    "project_button_label": "Projetos & Empresas",
-    "skills_and_services_button_label": "Skills & Serviços",
-    "about_me_button_label": "Sobre mim",
-    "contact_button_label": "Contato",
-    "projects_companies_section": {
-        "projects_label": "Projetos",
-        "companies_label": "Empresas",
-        "company_label": "Empresa"
-    },
-    "skills_services_section": {
-        "skills_label": "Skills",
-        "services_label": "Serviços",
-        "integrations_services_label": "Integrações",
-        "responsive_sites": "Sites Responsivos"
-    },
-    "contact_section": {
-        "title": "Contato",
-        "subject": "Assunto",
-        "message": "Mensagem",
-        "character_count": "Qtde. Caracteres:",
-        "send": "Enviar",
-        "made_by": "Desenvolvido por"
-    },
-    "about_me_section": {
-        "title": "Sobre mim",
-        "description_p1": "Olá, meu nome é Gabriel Caetano, tenho {{value}} anos e possuo mais de 8 anos de experiência em desenvolvimento de software. Desde pequeno sempre gostei muito de computadores e desde o início da minha carreira, mergulhei de cabeça no desenvolvimento, sempre buscando novos desafios e oportunidades para inovar no ramo da tecnologia.",
-        "description_p2": "Estou sempre experimentando novas ferramentas, explorando novas linguagens e realizando projetos pessoais para que possa expandir e aprimorar minhas habilidades e conhecimentos na área.",
-        "description_p3": "Além da parte técnica, busco sempre melhorar a comunicação e colaborar com todos com quem trabalho, permitindo que me adapte a qualquer ambiente no qual esteja inserido."
+  "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Olá mundo, meu nome é <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>   ",
+  "description_label": "Engenheiro de Software com mais de 8 anos de experiência e entusiasta da tecnologia.<span class='text-[#FFEDA3]'>)</span>",
+  "download_resume_button_label": "Baixar currículo",
+  "project_button_label": "Projetos & Empresas",
+  "skills_and_services_button_label": "Skills & Serviços",
+  "about_me_button_label": "Sobre mim",
+  "contact_button_label": "Contato",
+  "navigation": {
+    "home": "Home",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "home_section": {
+    "eyebrow": "Gabriel Caetano",
+    "title_line_1": "Construindo o futuro através do",
+    "title_line_2": "código.",
+    "description": "Engenheiro de software com mais de 8 anos de experiência, focado em sistemas escaláveis, integrações robustas e experiências digitais com precisão arquitetural.",
+    "primary_cta": "Ver projetos",
+    "art_label_top": "Engenheiro de",
+    "art_label_bottom": "Software"
+  },
+  "projects_section": {
+    "eyebrow": "Principais Trabalhos",
+    "title_line_1": "Soluções de",
+    "title_line_2": "arquitetura.",
+    "description": "Uma seleção de arquiteturas de alta fidelidade, com ênfase em escalabilidade, desempenho e segurança.",
+    "view_link": "Abrir case",
+    "pending_link": "Interno / Confidencial",
+    "items": {
+      "ef_core_migration_buddy": {
+        "summary": "Extensão para VS Code que automatiza o ciclo de migrações do Entity Framework Core, eliminando comandos repetitivos via formulários guiados e detecção automática de DbContext em soluções .NET."
+      },
+      "manager_platform": {
+        "summary": "Desenvolvido a Manager Platform, funcionalidade central do ecossistema de recrutamento 100% digital da Connekt — uma plataforma de HR tech que permite às empresas automatizar e personalizar processos seletivos de ponta a ponta, incluindo jornadas de candidatos com testes, entrevistas e matching com inteligência artificial."
+      },
+      "education_platform": {
+        "summary": "Sistema de gestão educacional com backend em .NET Core, persistência em PostgreSQL e camada React para suportar jornadas administrativas."
+      },
+      "pss": {
+        "summary": "Desenvolvido a ProfileSync API, um componente backend crítico para o projeto de migração de PSS da GOL Linhas Aéreas, de Navitaire para Sabre — garantindo sincronização e gestão em tempo real dos perfis de clientes no site e canais digitais da companhia durante uma das maiores transições de sistema do setor aéreo na América Latina."
+      },
+      "whatsapp_worker": {
+        "summary": "Desenvolvido um robusto worker em background para o ecossistema GOL Linhas Aéreas / Smiles, consultando histórico de compras, status de check-in e dados relacionados aos passageiros em aplicações internas (plataforma de fidelidade Smiles, Sabre PSS e sistemas GOL), encaminhando-os de forma segura a uma API externa que alimenta um bot no WhatsApp para notificações proativas, atendimento personalizado e experiências fluidas ao cliente."
+      },
+      "consult_miles": {
+        "summary": "Desenvolvido e mantido um conjunto de APIs especializadas para consulta e entrega de saldos de milhas Smiles em tempo real, como parte das melhorias no programa de fidelidade Smiles Fidelidade da GOL Linhas Aéreas — possibilitando acesso preciso e seguro aos dados de milhagem dos usuários para integrações web, app, bot e parceiros."
+      },
+      "cadu": {
+        "summary": "Sistema CADU reorganizado como card editorial, preservando a stack já cadastrada e marcando apenas os complementos que ainda dependem de conteúdo adicional."
+      }
     }
+  },
+  "experience_section": {
+    "eyebrow": "Trajetória Profissional",
+    "title_line_1": "Construindo",
+    "title_line_2": "o futuro.",
+    "description": "Um registro cronológico de decisões arquiteturais, sistemas construídos e equipes lideradas. Com foco em aplicações web de alta performance e infraestrutura escalável.",
+    "present": "Presente",
+    "parallel_badge": "Paralelo",
+    "pending_badge": "Conteúdo pendente",
+    "employment": {
+      "full_time": "Tempo integral",
+      "contract": "Contrato",
+      "freelance": "Freelance",
+      "part_time": "Meio período"
+    },
+    "items": {
+      "pending_summary": "Completar depois com escopo, entregas e contexto dessa experiência.",
+      "tecban": {
+        "summary": "Analista Sênior de Segurança Física e Operacional na TecBan (operadora da maior rede de ATMs do Brasil), com progressão desde cargos iniciais em 2015 por quatro funções distintas. Desenvolveu e manteve ferramentas de automação (Java, .NET, VBA) para eliminar processos manuais nas operações de logística de numerário e segurança de ATMs. Integrou soluções com bancos de dados Oracle e SQL Server, utilizou GCP para implantação em nuvem e participou de projetos interfuncionais de arquitetura de segurança em um ambiente fintech regulado e crítico, em operação 24/7.",
+        "role_1": {
+          "title": "Assistente de Segurança Física e Operacional I",
+          "period": "Período do cargo pendente"
+        },
+        "role_2": {
+          "title": "Assistente de Segurança Física e Operacional II",
+          "period": "Período do cargo pendente"
+        },
+        "role_3": {
+          "title": "Técnico de Segurança Física e Operacional I",
+          "period": "Período do cargo pendente"
+        },
+        "role_4": {
+          "title": "Analista de Segurança Física e Operacional I",
+          "period": "Período do cargo pendente"
+        },
+        "role_5": {
+          "title": "Analista de Segurança Física e Operacional III",
+          "period": "Período do cargo pendente"
+        }
+      },
+      "connekt": {
+        "summary": "Desenvolvedor full-stack de uma plataforma digital de recrutamento, construindo dashboards para gestores e interfaces para candidatos. Backend desenvolvido com Java, Spring e Maven; frontend com Angular e React. Gerenciou bancos de dados MySQL, implantou infraestrutura em nuvem na AWS e Azure, e estabeleceu pipelines de CI/CD com Jenkins para automatizar builds e acelerar ciclos de entrega.",
+        "role_1": {
+          "title": "Desenvolvedor Fullstack",
+          "period": "Período do cargo pendente"
+        }
+      },
+      "cbyk": {
+        "summary": "Desenvolvedor Fullstack/Middleware responsável pelo ciclo completo de APIs críticas que sustentam canais mobile, web e integrações externas. Desenvolve APIs RESTful de alta performance com .NET Core (C#/.NET 8+), containeriza serviços com Docker e gerencia bancos de dados Oracle e MongoDB. Implementa CI/CD com testes automatizados e varreduras de segurança com Checkmarx, colaborando de forma interfuncional para evoluir a arquitetura para padrões de microsserviços com boas práticas de observabilidade.",
+        "role_1": {
+          "title": "Engenheiro de Software Sênior",
+          "period": "Período do cargo pendente"
+        }
+      },
+      "d7": {
+        "summary": "Atuei como desenvolvedor fullstack em um sistema de gestão de linha de produção farmacêutica, cobrindo todo o fluxo de fabricação — desde o recebimento de matéria-prima, pesagem e cálculos de dosagem até o empacotamento final. Implementei validação por tags QR code para garantir rastreabilidade, precisão e controle de qualidade ao longo de todo o processo produtivo.",
+        "role_1": {
+          "title": "Desenvolvedor Fullstack",
+          "period": "Período do cargo pendente"
+        }
+      },
+      "r3": {
+        "summary": "Completar depois com o contexto da atuação atual na R3+, escopo do trabalho e principais entregas.",
+        "role_1": {
+          "title": "Desenvolvedor Backend",
+          "period": "Período do cargo pendente"
+        }
+      }
+    }
+  },
+  "projects_companies_section": {
+    "projects_label": "Projetos",
+    "companies_label": "Empresas",
+    "company_label": "Empresa"
+  },
+  "skills_services_section": {
+    "skills_label": "Skills",
+    "services_label": "Serviços",
+    "integrations_services_label": "Integrações",
+    "responsive_sites": "Sites Responsivos"
+  },
+  "contact_section": {
+    "title": "Contato",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "character_count": "Qtde. caracteres:",
+    "send": "Enviar",
+    "made_by": "Desenvolvido por"
+  },
+  "about_me_section": {
+    "title": "Sobre mim",
+    "description_p1": "Olá, meu nome é Gabriel Caetano, tenho {{value}} anos e possuo mais de 8 anos de experiência em desenvolvimento de software. Desde pequeno sempre gostei muito de computadores e desde o início da minha carreira, mergulhei de cabeça no desenvolvimento, sempre buscando novos desafios e oportunidades para inovar no ramo da tecnologia.",
+    "description_p2": "Estou sempre experimentando novas ferramentas, explorando novas linguagens e realizando projetos pessoais para que possa expandir e aprimorar minhas habilidades e conhecimentos na área.",
+    "description_p3": "Além da parte técnica, busco sempre melhorar a comunicação e colaborar com todos com quem trabalho, permitindo que me adapte a qualquer ambiente no qual esteja inserido."
+  },
+  "about_contact_section": {
+    "eyebrow": "Arquitetura de Sistemas",
+    "title_pattern": "Construindo sistemas [[resilientes]]\n para a\nweb moderna.",
+    "intro": "O bloco final reúne manifesto pessoal, competências centrais, arsenal técnico e canal de contato dentro do mesmo ritmo visual do conceito editorial.",
+    "competencies_eyebrow": "Principais Competências",
+    "competencies_title": "A arquitetura por trás da entrega.",
+    "stack_eyebrow": "Arsenal Técnico",
+    "stack_title": "Ferramentas e plataformas do dia a dia.",
+    "contact_eyebrow": "Vamos Construir Algo Juntos?",
+    "contact_title": "Vamos abrir um canal.",
+    "contact_description": "Se você quiser iniciar um novo projeto, revisar uma arquitetura existente ou conversar sobre uma oportunidade, use os links abaixo ou envie uma mensagem.",
+    "contact_groups": {
+      "social": "Redes sociais",
+      "contact": "Contato"
+    },
+    "contact_form_subject_placeholder": "Assunto da conversa",
+    "contact_form_message_placeholder": "Descreva o contexto, objetivo e próximos passos desejados.",
+    "stats": {
+      "years": "Anos de experiência",
+      "projects": "Projetos",
+      "companies": "Empresas"
+    },
+    "competencies": {
+      "system_design": {
+        "title": "Design de Sistemas",
+        "description": "Arquitetura de APIs, serviços e fluxos distribuídos com foco em clareza operacional, manutenção e escala."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Otimização de jornadas críticas, redução de latência e decisões técnicas guiadas por consistência em produção."
+      },
+      "integration": {
+        "title": "Integrações",
+        "description": "Conexão entre plataformas, automações e ecossistemas corporativos com atenção a resiliência e observabilidade."
+      },
+      "security_auth": {
+        "title": "Segurança & Autenticação",
+        "description": "Implementação de arquiteturas zero-trust, protocolos de transmissão segura de dados e fluxos de autenticação robustos."
+      }
+    }
+  }
 }

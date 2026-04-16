@@ -1,0 +1,337 @@
+:host {
+  display: block;
+}
+
+.experience-shell {
+  background: var(--surface);
+}
+
+.timeline-heading {
+  align-items: end;
+}
+
+.timeline-title {
+  display: grid;
+  gap: 0.04em;
+  line-height: 0.92;
+}
+
+.timeline-title-muted {
+  color: var(--on-surface-variant);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 4rem;
+  padding-top: 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(243, 255, 202, 0.5), rgba(73, 72, 71, 0.3));
+}
+
+.timeline-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding-left: 2.75rem;
+}
+
+.timeline-node {
+  position: absolute;
+  left: 0.56rem;
+  top: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: var(--surface-container-highest);
+  border: 1px solid rgba(243, 255, 202, 0.35);
+  box-shadow: 0 0 18px rgba(243, 255, 202, 0.12);
+}
+
+.timeline-node-current {
+  background: var(--primary);
+  border-color: rgba(243, 255, 202, 0.8);
+  box-shadow: 0 0 0 4px rgba(243, 255, 202, 0.08), 0 0 24px rgba(243, 255, 202, 0.45);
+}
+
+.timeline-company-card {
+  display: grid;
+  gap: 1.25rem;
+  min-height: 100%;
+  padding: 1.4rem;
+  border-radius: 1.25rem;
+  background: rgba(26, 25, 25, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.timeline-company-card-parallel {
+  border-color: rgba(243, 255, 202, 0.14);
+  background: rgba(243, 255, 202, 0.04);
+}
+
+.timeline-group-content {
+  min-width: 0;
+}
+
+.timeline-group-cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.timeline-company-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.timeline-company-leading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.timeline-company-logos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+}
+
+.timeline-company-copy {
+  min-width: 0;
+  flex: 1 1 14rem;
+}
+
+.timeline-company-meta {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.timeline-company-badges {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.timeline-company-badges .timeline-role-badge {
+  background: rgba(243, 255, 202, 0.1);
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .timeline-company-header {
+    align-items: stretch;
+  }
+
+  .timeline-company-leading {
+    gap: 0.85rem;
+  }
+
+  .timeline-company-logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .timeline-company-copy {
+    flex-basis: 100%;
+  }
+
+  .timeline-company-badges {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}
+
+.timeline-company-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.9rem;
+  object-fit: cover;
+  background: var(--surface-container-lowest);
+}
+
+.timeline-period {
+  margin: 0 0 0.35rem;
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.timeline-company {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+}
+
+.timeline-company-summary {
+  margin: 0;
+  color: var(--on-surface-variant);
+  line-height: 1.75;
+}
+
+.timeline-roles {
+  display: grid;
+  gap: 1rem;
+  padding-top: 0.15rem;
+}
+
+.timeline-role-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.15rem;
+  border-radius: 1rem;
+  background: rgba(38, 38, 38, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timeline-role-period {
+  margin: 0 0 0.65rem;
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.timeline-role-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.timeline-role-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  background: var(--surface-container-highest);
+  color: var(--on-surface-variant);
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-role-badge-parallel {
+  background: rgba(243, 255, 202, 0.1);
+  color: var(--primary);
+}
+
+.timeline-role {
+  margin: 0;
+  color: var(--on-surface);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.timeline-role-badge-pending {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.timeline-pending {
+  justify-self: start;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-container-highest);
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline-highlight {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.timeline-highlight-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.timeline-highlight-label {
+  color: var(--on-surface-variant);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 960px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-group {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 0;
+  }
+
+  .timeline-node {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.5rem;
+  }
+
+  .timeline-group-content {
+    width: calc(50% - 2rem);
+  }
+
+  .timeline-group-left .timeline-group-content {
+    justify-self: start;
+  }
+
+  .timeline-group-right .timeline-group-content {
+    justify-self: end;
+  }
+
+  .timeline-group-shared .timeline-group-content {
+    width: 100%;
+  }
+
+  .timeline-group-left .timeline-group-content {
+    padding-right: 3rem;
+  }
+
+  .timeline-group-right .timeline-group-content {
+    padding-left: 3rem;
+  }
+
+  .timeline-group-shared .timeline-group-content {
+    padding-inline: 3rem;
+  }
+
+  .timeline-group-cards-shared {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 959px) {
+  .timeline-group-cards-shared {
+    grid-template-columns: 1fr;
+  }
+}

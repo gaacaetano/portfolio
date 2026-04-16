@@ -1,78 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body { 
-  height: 100%;
+:root {
+  --surface: #0e0e0e;
+  --surface-container-lowest: #000000;
+  --surface-container-low: #131313;
+  --surface-container: #1a1919;
+  --surface-container-high: #201f1f;
+  --surface-container-highest: #262626;
+  --primary: #f3ffca;
+  --primary-container: #cafd00;
+  --on-primary-fixed: #3a4a00;
+  --outline-variant: #494847;
+  --on-surface: #ffffff;
+  --on-surface-variant: #adaaaa;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Inter', sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  background: var(--surface);
+  color: var(--on-surface);
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   overflow-x: hidden;
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, span, p {
-  font-family: 'JetBrains Mono', monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Custom Scrollbar */
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(243, 255, 202, 0.7);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(243, 255, 202, 0.22);
+  color: var(--on-surface);
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #232323;
+  background: var(--surface);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFEDA3;
-  border-radius: 4px;
+  background: rgba(73, 72, 71, 0.9);
+  border-radius: 999px;
+  border: 2px solid var(--surface);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e6d693;
+  background: rgba(243, 255, 202, 0.34);
 }
 
-/* Selection */
-::selection {
-  background: rgba(255, 237, 163, 0.3);
-  color: #232323;
+.section-shell {
+  padding: clamp(4rem, 8vw, 7rem) 0;
 }
 
-/* Section Titles */
-.section-title {
-  position: relative;
+.section-container {
+  width: min(100% - 2rem, 78rem);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--primary);
+  font-family: var(--font-label);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-title-display {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.section-copy {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.gradient-ink {
   display: inline-block;
-  padding-bottom: 12px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #FFEDA3, #232323);
-  border-radius: 2px;
-}
-
-/* Smooth fade-in animation for sections */
-.effect-div {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 900px) {
+  .section-heading {
+    align-items: start;
   }
 }

@@ -1,143 +1,100 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelect, MatSelectModule } from '@angular/material/select';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AboutContactComponent } from './about-contact/about-contact.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SkillsServicesComponent } from './skills-services/skills-services.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ContactComponent } from './contact/contact.component';
-import { ViewportScroller } from '@angular/common';
+import { heroContent } from './portfolio-content';
 
 interface Language {
-  value: string;
-  imageUrl: string;
+  value: 'pt' | 'en' | 'es';
+  label: string;
 }
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    TranslateModule,
-    ProjectsComponent,
-    SkillsServicesComponent,
-    AboutMeComponent,
-    ContactComponent,
-    MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatSelectModule
-],
+  imports: [CommonModule, TranslateModule, ProjectsComponent, ExperienceComponent, AboutContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
-  @ViewChild(MatSelect) select!: MatSelect;
-
   title = 'Gabriel Caetano - Software Engineer';
   languages: Language[] = [
-    { value: 'pt', imageUrl: '../assets/languages/portuguese.png' },
-    { value: 'en', imageUrl: '../assets/languages/english.png' },
-    { value: 'es', imageUrl: '../assets/languages/spanish.png' }
+    { value: 'pt', label: 'PT' },
+    { value: 'en', label: 'EN' },
+    { value: 'es', label: 'ES' }
   ];
-  cvLinks: string[] = [
-    'https://www.icloud.com/iclouddrive/0ccbrISwVsb9wbR-dbLaSlKUQ#CV_-_Portuguese',
-    'https://www.icloud.com/iclouddrive/0fcwxwaym_uWgkW21VE1JzoIQ#CV_-_English'
-  ];
-  cvLinkSelected = "https://www.icloud.com/iclouddrive/0ccbrISwVsb9wbR-dbLaSlKUQ#CV_-_Portuguese";
-  selectedLanguage = this.languages[0];
-  isMainSelected = true;
+  selectedLanguage: Language = this.languages[0];
+  currentSection = 'home';
 
-  constructor(private translateService: TranslateService, private scroller: ViewportScroller) {
-    translateService.addLangs(['en', 'pt', 'br']);
+  readonly navItems = [
+    { id: 'home', labelKey: 'navigation.home' },
+    { id: 'projects', labelKey: 'navigation.projects' },
+    { id: 'experience', labelKey: 'navigation.experience' },
+    { id: 'about-contact', labelKey: 'navigation.about' },
+    { id: 'contact', labelKey: 'navigation.contact' }
+  ];
+
+  readonly heroContent = heroContent;
+
+  constructor(
+    private translateService: TranslateService,
+    private scroller: ViewportScroller
+  ) {
+    translateService.addLangs(['pt', 'en', 'es']);
     translateService.setDefaultLang('pt');
+    translateService.use('pt');
   }
 
-  ngOnInit() {
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && window.innerWidth >= 1920) {
-          entry.target.classList.add('animate-fade-in-left');
-          return;
-        }
-
-        entry.target.classList.remove('animate-fade-in-left');
-      });
-    }, { threshold: 0.01 });
-
-    document.querySelectorAll('.effect-div').forEach(target => {
-      observer.observe(target);
-    });
+  setLanguage(language: Language): void {
+    this.selectedLanguage = language;
+    this.translateService.use(language.value);
   }
 
-  @HostListener('document:scroll')
-  public onViewportScroll() {
-    let position: [number, number] = this.scroller.getScrollPosition();
-    if (position[0] == 0 && position[1] == 0) {
-      this.isMainSelected = true;
-    } else {
-      this.isMainSelected = false;
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (!element) {
+      return;
     }
+
+    const offset = sectionId === 'home' ? 0 : element.offsetTop - 48;
+    this.currentSection = sectionId;
+    this.smoothScrollTo(offset, 550);
   }
 
-  handleSelectionChange() {
-    this.translateService.use(this.selectedLanguage.value);
-    this.cvLinkSelected = this.selectedLanguage.value != 'pt' ? this.cvLinks[1] : this.cvLinks[0];
-    this.select.close();
+  openResume(): void {
+    window.open(this.heroContent.resumeLinks[this.selectedLanguage.value], '_blank', 'noopener,noreferrer');
   }
 
-  goToProjectsSection() {
-    const element = document.getElementById("projects");
-    if (element) {
-      this.smoothScrollTo(element.offsetTop, 500);
+  @HostListener('window:scroll')
+  onViewportScroll(): void {
+    const midpoint = window.scrollY + window.innerHeight * 0.35;
+
+    for (const item of [...this.navItems].reverse()) {
+      const element = document.getElementById(item.id);
+      if (element && midpoint >= element.offsetTop) {
+        this.currentSection = item.id;
+        return;
+      }
     }
+
+    this.currentSection = 'home';
   }
 
-  goToSkillsAndServicesSection() {
-    const element = document.getElementById("skills-services");
-    if (element) {
-      this.smoothScrollTo(element.offsetTop, 500);
-    }
-  }
-
-  goToAboutMeSection() {
-    const element = document.getElementById("about-me");
-    if (element) {
-      this.smoothScrollTo(element.offsetTop, 500);
-    }
-  }
-
-  goToContactSection() {
-    const element = document.getElementById("contact");
-    if (element) {
-      this.smoothScrollTo(element.offsetTop, 500);
-    }
-  }
-
-  goToTop() {
-    const element = document.getElementById("main");
-    if (element) {
-      this.smoothScrollTo(element.offsetTop, 500); // 1.5 segundos
-    }
-  }
-
-  private smoothScrollTo(targetPosition: number, duration: number = 500) {
-    const startPosition = window.pageYOffset;
+  private smoothScrollTo(targetPosition: number, duration: number): void {
+    const startPosition = this.scroller.getScrollPosition()[1];
     const distance = targetPosition - startPosition;
     const startTime = performance.now();
 
-    const easeInOutCubic = (t: number) => {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-    };
+    const easeInOutCubic = (t: number): number =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
     const animation = (currentTime: number) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = easeInOutCubic(progress);
-
-      window.scrollTo(0, startPosition + distance * easeProgress);
+      const eased = easeInOutCubic(progress);
+      window.scrollTo(0, startPosition + distance * eased);
 
       if (progress < 1) {
         requestAnimationFrame(animation);

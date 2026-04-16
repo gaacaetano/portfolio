@@ -1,34 +1,191 @@
 {
-    "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Hello world, my name is <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>",
-    "description_label": "Software engineer with over 8 years' experience and technology enthusiast.<span class='text-[#FFEDA3]'>)</span>",
-    "download_resume_button_label": "Download Resume",
-    "project_button_label": "Projects & Companies",
-    "skills_and_services_button_label": "Skills & Services",
-    "about_me_button_label": "About me",
-    "contact_button_label": "Contact",
-    "projects_companies_section": {
-        "projects_label": "Projects",
-        "companies_label": "Companies",
-        "company_label": "Company"
-    },
-    "skills_services_section": {
-        "skills_label": "Skills",
-        "services_label": "Services",
-        "integrations_services_label": "Integrations",
-        "responsive_sites": "Responsive Sites"
-    },
-    "contact_section": {
-        "title": "Contact",
-        "subject": "Subject",
-        "message": "Message",
-        "character_count": "Characters Count:",
-        "send": "Send",
-        "made_by": "Developed by"
-    },
-    "about_me_section": {
-        "title": "About Me",
-        "description_p1": "Hello, my name is Gabriel Caetano, I'm {{value}} years old and I have over 8 years of experience in software development. Ever since I was little, I've loved computers and since the beginning of my career, I've dived headfirst into development, always looking for new challenges and opportunities to innovate in the field of technology.",
-        "description_p2": "I'm always experimenting with new tools, exploring new languages and carrying out personal projects so that I can expand and improve my skills and knowledge in the area.",
-        "description_p3": "As well as the technical side, I'm always looking to improve my communication skills and collaborate with everyone I work with, allowing me to adapt to any environment I'm in."
+  "welcome_label": "<span class='text-[#FFEDA3]'>Console.WriteLine(@</span>\"Hello world, my name is <span class='font-bold min-[320px]:text-lg lg:text-2xl'>Gabriel Caetano.</span>",
+  "description_label": "Software engineer with over 8 years' experience and technology enthusiast.<span class='text-[#FFEDA3]'>)</span>",
+  "download_resume_button_label": "Download resume",
+  "project_button_label": "Projects & Companies",
+  "skills_and_services_button_label": "Skills & Services",
+  "about_me_button_label": "About me",
+  "contact_button_label": "Contact",
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home_section": {
+    "eyebrow": "Gabriel Caetano",
+    "title_line_1": "Engineering the future through",
+    "title_line_2": "code.",
+    "description": "Software engineer with over 8 years of experience focused on scalable systems, robust integrations, and digital experiences shaped with architectural precision.",
+    "primary_cta": "View projects",
+    "art_label_top": "Software",
+    "art_label_bottom": "Engineer"
+  },
+  "projects_section": {
+    "eyebrow": "Featured Work",
+    "title_line_1": "Architectural",
+    "title_line_2": "solutions.",
+    "description": "A selection of high-fidelity architectures, emphasizing scalability, performance, and security.",
+    "view_link": "Open case",
+    "pending_link": "Internal / Confidential",
+    "items": {
+      "ef_core_migration_buddy": {
+        "summary": "VS Code extension that automates the Entity Framework Core migration lifecycle, eliminating repetitive commands through guided forms and automatic DbContext detection in .NET solutions."
+      },
+      "manager_platform": {
+        "summary": "Developed the Manager Platform, a core feature of Connekt's 100% digital recruitment ecosystem — an HR tech platform that enables companies to automate and customize end-to-end hiring processes, including candidate journeys with tests, interviews, and AI-driven matching."
+      },
+      "education_platform": {
+        "summary": "Educational management system with a .NET Core backend, PostgreSQL persistence, and a React layer supporting administrative journeys."
+      },
+      "pss": {
+        "summary": "Developed the ProfileSync API, a critical backend component for GOL Airlines' PSS migration project from Navitaire to Sabre — ensuring seamless, real-time synchronization and management of customer profiles across the airline's website and digital channels during one of the largest airline system transitions in Latin America."
+      },
+      "whatsapp_worker": {
+        "summary": "Developed a robust background worker (background service) for GOL Linhas Aéreas / Smiles ecosystem, querying purchase history, check-in status, and related passenger data from internal applications (Smiles loyalty platform, Sabre PSS, and GOL systems), then securely forwarding it to an external API that feeds a WhatsApp bot for proactive notifications, personalized assistance, and seamless customer experiences."
+      },
+      "consult_miles": {
+        "summary": "Developed and maintain a set of specialized APIs for querying and delivering Smiles miles balances in real-time, as part of enhancements to GOL Airlines' Smiles Fidelidade loyalty program — enabling accurate, secure access to user mileage data for web, app, bot, and partner integrations."
+      },
+      "cadu": {
+        "summary": "CADU system reframed as an editorial card, preserving the current stack and marking only the complements that still depend on extra content."
+      }
     }
+  },
+  "experience_section": {
+    "eyebrow": "Professional Timeline",
+    "title_line_1": "Engineering",
+    "title_line_2": "The Future.",
+    "description": "A chronological record of architectural decisions, systems built, and teams led. Focusing on high-performance web applications and scalable infrastructure.",
+    "present": "Present",
+    "parallel_badge": "Parallel",
+    "pending_badge": "Content pending",
+    "employment": {
+      "full_time": "Full-time",
+      "contract": "Contract",
+      "freelance": "Freelance",
+      "part_time": "Part-time"
+    },
+    "items": {
+      "pending_summary": "Fill later with the context, scope, and main deliverables for this experience.",
+      "tecban": {
+        "summary": "Senior Physical & Operational Security Analyst at TecBan (Brazil's largest ATM network operator), progressing from entry-level in 2015 through four roles. Built and maintained automation tools (Java, .NET, VBA) to eliminate manual processes in cash logistics and ATM security operations. Integrated solutions with Oracle and SQL Server databases, leveraged GCP for cloud deployment, and contributed to cross-functional security architecture and project management in a regulated 24/7 fintech environment.",
+        "role_1": {
+          "title": "Physical and Operational Security Assistant I",
+          "period": "Role timeframe pending"
+        },
+        "role_2": {
+          "title": "Physical and Operational Security Assistant II",
+          "period": "Role timeframe pending"
+        },
+        "role_3": {
+          "title": "Physical and Operational Security Technician I",
+          "period": "Role timeframe pending"
+        },
+        "role_4": {
+          "title": "Physical and Operational Security Analyst I",
+          "period": "Role timeframe pending"
+        },
+        "role_5": {
+          "title": "Physical and Operational Security Analyst III",
+          "period": "Role timeframe pending"
+        }
+      },
+      "connekt": {
+        "summary": "Full-stack developer on a end-to-end digital recruitment platform, building both manager dashboards and candidate-facing interfaces. Backend developed with Java, Spring and Maven; frontend with Angular and React. Managed MySQL databases, deployed cloud infrastructure on AWS and Azure, and established CI/CD pipelines with Jenkins to automate builds and accelerate delivery cycles.",
+        "role_1": {
+          "title": "Fullstack Developer",
+          "period": "Role timeframe pending"
+        }
+      },
+      "cbyk": {
+        "summary": "Fullstack/Middleware developer owning the full lifecycle of critical APIs powering mobile, web, and external integrations. Builds high-performance RESTful APIs with .NET Core (C#/.NET 8+), containerizes services with Docker, and manages Oracle and MongoDB databases. Implements CI/CD with automated testing and Checkmarx security scans, while collaborating cross-functionally to evolve architecture toward microservices with observability best practices.",
+        "role_1": {
+          "title": "Senior Software Engineer",
+          "period": "Role timeframe pending"
+        }
+      },
+      "d7": {
+        "summary": "Worked as a fullstack developer on a pharmaceutical production line management system, covering the entire manufacturing workflow — from raw material reception, weighing, and dosage calculations through to final packaging. Implemented QR code tag validation to ensure traceability, accuracy, and quality control throughout the production process.",
+        "role_1": {
+          "title": "Fullstack Developer",
+          "period": "Role timeframe pending"
+        }
+      },
+      "r3": {
+        "summary": "Fill later with the context of the current engagement at R3+, work scope, and main deliverables.",
+        "role_1": {
+          "title": "Backend Developer",
+          "period": "Role timeframe pending"
+        }
+      }
+    }
+  },
+  "projects_companies_section": {
+    "projects_label": "Projects",
+    "companies_label": "Companies",
+    "company_label": "Company"
+  },
+  "skills_services_section": {
+    "skills_label": "Skills",
+    "services_label": "Services",
+    "integrations_services_label": "Integrations",
+    "responsive_sites": "Responsive Sites"
+  },
+  "contact_section": {
+    "title": "Contact",
+    "subject": "Subject",
+    "message": "Message",
+    "character_count": "Characters count:",
+    "send": "Send",
+    "made_by": "Developed by"
+  },
+  "about_me_section": {
+    "title": "About Me",
+    "description_p1": "Hello, my name is Gabriel Caetano, I'm {{value}} years old and I have over 8 years of experience in software development. Ever since I was little, I've loved computers and since the beginning of my career, I've dived headfirst into development, always looking for new challenges and opportunities to innovate in the field of technology.",
+    "description_p2": "I'm always experimenting with new tools, exploring new languages and carrying out personal projects so that I can expand and improve my skills and knowledge in the area.",
+    "description_p3": "As well as the technical side, I'm always looking to improve my communication skills and collaborate with everyone I work with, allowing me to adapt to any environment I'm in."
+  },
+  "about_contact_section": {
+    "eyebrow": "System Architecture",
+    "title_pattern": "Building [[resilient]]\nsystems for the\nmodern web.",
+    "intro": "The final block brings together personal manifesto, core competencies, technical arsenal, and contact channels within the same editorial rhythm defined by the attached concept.",
+    "competencies_eyebrow": "Core Competencies",
+    "competencies_title": "The architecture behind delivery.",
+    "stack_eyebrow": "Technical Arsenal",
+    "stack_title": "Daily tools and platforms.",
+    "contact_eyebrow": "Let's Build Something Together?",
+    "contact_title": "Let's open a channel.",
+    "contact_description": "If you want to start a new project, review an existing architecture, or talk about an opportunity, use the links below or send a message.",
+    "contact_groups": {
+      "social": "Social media",
+      "contact": "Contact"
+    },
+    "contact_form_subject_placeholder": "Conversation subject",
+    "contact_form_message_placeholder": "Describe the context, goal, and desired next steps.",
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Projects",
+      "companies": "Companies"
+    },
+    "competencies": {
+      "system_design": {
+        "title": "System Design",
+        "description": "Architecture for APIs, services, and distributed flows with focus on operational clarity, maintainability, and scale."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimization of critical journeys, latency reduction, and technical decisions guided by consistency in production."
+      },
+      "integration": {
+        "title": "Integrations",
+        "description": "Connections across platforms, automations, and enterprise ecosystems with attention to resilience and observability."
+      },
+      "security_auth": {
+        "title": "Security & Auth",
+        "description": "Implemeting zero-trust architectures, secure data transmission protocols and robust authentication flows."
+      }
+    }
+  }
 }
