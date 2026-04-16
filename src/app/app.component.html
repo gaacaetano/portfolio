@@ -5,7 +5,7 @@
         <span>GC</span>
       </button>
 
-      <nav class="dock-nav" aria-label="Main navigation">
+      <nav class="dock-nav dock-nav-desktop" aria-label="Main navigation">
         @for (item of navItems; track item.id) {
         <button
           type="button"
@@ -17,7 +17,45 @@
         }
       </nav>
 
-      <div class="language-switch" aria-label="Language selector">
+      <div class="language-switch language-switch-desktop" aria-label="Language selector">
+        @for (language of languages; track language.value) {
+        <button
+          type="button"
+          class="language-pill"
+          [class.is-active]="selectedLanguage.value === language.value"
+          (click)="setLanguage(language)">
+          {{ language.label }}
+        </button>
+        }
+      </div>
+
+      <button
+        type="button"
+        class="mobile-menu-toggle"
+        [class.is-open]="isMobileMenuOpen"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="isMobileMenuOpen"
+        aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu-panel" [class.is-open]="isMobileMenuOpen" [attr.aria-hidden]="!isMobileMenuOpen">
+      <nav class="dock-nav dock-nav-mobile" aria-label="Mobile navigation">
+        @for (item of navItems; track item.id) {
+        <button
+          type="button"
+          class="dock-link"
+          [class.is-active]="currentSection === item.id"
+          (click)="scrollToSection(item.id)">
+          {{ item.labelKey | translate }}
+        </button>
+        }
+      </nav>
+
+      <div class="language-switch language-switch-mobile" aria-label="Mobile language selector">
         @for (language of languages; track language.value) {
         <button
           type="button"

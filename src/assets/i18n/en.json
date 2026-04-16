@@ -43,7 +43,7 @@
         "summary": "Developed the ProfileSync API, a critical backend component for GOL Airlines' PSS migration project from Navitaire to Sabre — ensuring seamless, real-time synchronization and management of customer profiles across the airline's website and digital channels during one of the largest airline system transitions in Latin America."
       },
       "whatsapp_worker": {
-        "summary": "Developed a robust background worker (background service) for GOL Linhas Aéreas / Smiles ecosystem, querying purchase history, check-in status, and related passenger data from internal applications (Smiles loyalty platform, Sabre PSS, and GOL systems), then securely forwarding it to an external API that feeds a WhatsApp bot for proactive notifications, personalized assistance, and seamless customer experiences."
+        "summary": "Developed a robust background worker for the GOL Linhas Aéreas / Smiles ecosystem, querying purchase history, check-in status, and related passenger data from internal applications (Smiles loyalty platform, Sabre PSS, and GOL systems), then securely forwarding it to an external API that feeds a WhatsApp bot for proactive notifications, personalized assistance, and seamless customer experiences."
       },
       "consult_miles": {
         "summary": "Developed and maintained a set of specialized APIs for querying and delivering Smiles miles balances in real time, as part of enhancements to GOL Airlines' Smiles Fidelidade loyalty program — enabling accurate, secure access to user mileage data for web, app, bot, and partner integrations."
@@ -73,7 +73,7 @@
     "items": {
       "pending_summary": "Fill later with the context, scope, and main deliverables for this experience.",
       "tecban": {
-        "summary": "Senior Physical & Operational Security Analyst at TecBan (Brazil's largest ATM network operator), progressing from entry-level in 2015 through four roles. Built and maintained automation tools (Java, .NET, VBA) to eliminate manual processes in cash logistics and ATM security operations. Integrated solutions with Oracle and SQL Server databases, leveraged GCP for cloud deployment, and contributed to cross-functional security architecture and project management in a regulated 24/7 fintech environment.",
+        "summary": "Senior Physical & Operational Security Analyst at TecBan (Brazil's largest ATM network operator), progressing from entry-level roles in 2015 through four positions. Built and maintained automation tools (Java, .NET, VBA) to eliminate manual processes in cash logistics and ATM security operations. Integrated solutions with Oracle and SQL Server databases, leveraged GCP for cloud deployment, and contributed to cross-functional security architecture projects in a regulated 24/7 fintech environment.",
         "role_1": {
           "title": "Physical and Operational Security Assistant I",
           "period": "Role timeframe pending"
@@ -96,9 +96,9 @@
         }
       },
       "connekt": {
-        "summary": "Full-stack developer on an end-to-end digital recruitment platform, building both manager dashboards and candidate-facing interfaces. Backend developed with Java, Spring, and Maven; frontend with Angular and React. Managed MySQL databases, deployed cloud infrastructure on AWS and Azure, and established CI/CD pipelines with Jenkins to automate builds and accelerate delivery cycles.",
+        "summary": "Full-stack developer on an end-to-end digital recruitment platform, building both manager dashboards and candidate-facing interfaces. The backend was developed with Java, Spring, and Maven; the frontend with Angular and React. Managed MySQL databases, deployed cloud infrastructure on AWS and Azure, and established CI/CD pipelines with Jenkins to automate builds and accelerate delivery cycles.",
         "role_1": {
-          "title": "Fullstack Developer",
+          "title": "Full-Stack Developer",
           "period": "Role timeframe pending"
         }
       },
@@ -110,9 +110,9 @@
         }
       },
       "d7": {
-        "summary": "Worked as a fullstack developer on a pharmaceutical production line management system, covering the entire manufacturing workflow — from raw material reception, weighing, and dosage calculations through to final packaging. Implemented QR code tag validation to ensure traceability, accuracy, and quality control throughout the production process.",
+        "summary": "Worked as a full-stack developer on a pharmaceutical production line management system, covering the entire manufacturing workflow — from raw material receiving, weighing, and dosage calculations through final packaging. Implemented QR code validation to ensure traceability, accuracy, and quality control throughout the production process.",
         "role_1": {
-          "title": "Fullstack Developer",
+          "title": "Full-Stack Developer",
           "period": "Role timeframe pending"
         }
       },

@@ -20,6 +20,7 @@ interface Language {
 })
 export class AppComponent {
   title = 'Gabriel Caetano - Software Engineer';
+  isMobileMenuOpen = false;
   languages: Language[] = [
     { value: 'pt', label: 'PT' },
     { value: 'en', label: 'EN' },
@@ -50,6 +51,7 @@ export class AppComponent {
   setLanguage(language: Language): void {
     this.selectedLanguage = language;
     this.translateService.use(language.value);
+    this.isMobileMenuOpen = false;
   }
 
   scrollToSection(sectionId: string): void {
@@ -60,7 +62,12 @@ export class AppComponent {
 
     const offset = sectionId === 'home' ? 0 : element.offsetTop - 48;
     this.currentSection = sectionId;
+    this.isMobileMenuOpen = false;
     this.smoothScrollTo(offset, 550);
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   openResume(): void {

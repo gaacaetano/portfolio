@@ -98,21 +98,21 @@
       "connekt": {
         "summary": "Desarrollador full-stack de una plataforma digital de reclutamiento, construyendo dashboards para gestores e interfaces para candidatos. Backend desarrollado con Java, Spring y Maven; frontend con Angular y React. Administró bases de datos MySQL, desplegó infraestructura en la nube en AWS y Azure, y estableció pipelines de CI/CD con Jenkins para automatizar compilaciones y acelerar los ciclos de entrega.",
         "role_1": {
-          "title": "Desarrollador Fullstack",
+          "title": "Desarrollador Full-Stack",
           "period": "Período del cargo pendiente"
         }
       },
       "cbyk": {
-        "summary": "Desarrollador Fullstack/Middleware responsable del ciclo completo de APIs críticas que impulsan canales móviles, web e integraciones externas. Desarrolla APIs RESTful de alto rendimiento con .NET Core (C#/.NET 8+), conteneriza servicios con Docker y administra bases de datos Oracle y MongoDB. Implementa CI/CD con pruebas automatizadas y análisis de seguridad con Checkmarx, colaborando de forma interfuncional para evolucionar la arquitectura hacia patrones de microservicios con buenas prácticas de observabilidad.",
+        "summary": "Desarrollador Full-Stack/Middleware responsable del ciclo completo de APIs críticas que impulsan canales móviles, web e integraciones externas. Desarrolla APIs RESTful de alto rendimiento con .NET Core (C#/.NET 8+), conteneriza servicios con Docker y administra bases de datos Oracle y MongoDB. Implementa CI/CD con pruebas automatizadas y análisis de seguridad con Checkmarx, colaborando de forma interfuncional para evolucionar la arquitectura hacia patrones de microservicios con buenas prácticas de observabilidad.",
         "role_1": {
-          "title": "Ingeniero de Software Senior",
+          "title": "Ingeniero de Software Sénior",
           "period": "Período del cargo pendiente"
         }
       },
       "d7": {
         "summary": "Trabajé como desarrollador fullstack en un sistema de gestión de línea de producción farmacéutica, cubriendo todo el flujo de fabricación — desde la recepción de materia prima, pesaje y cálculos de dosificación hasta el empaquetado final. Implementé validación mediante etiquetas con código QR para garantizar trazabilidad, precisión y control de calidad a lo largo de todo el proceso productivo.",
         "role_1": {
-          "title": "Desarrollador Fullstack",
+          "title": "Desarrollador Full-Stack",
           "period": "Período del cargo pendiente"
         }
       },
@@ -178,7 +178,7 @@
         "description": "Arquitectura de APIs, servicios y flujos distribuidos con foco en claridad operativa, mantenibilidad y escala."
       },
       "performance": {
-        "title": "Performance",
+        "title": "Rendimiento",
         "description": "Optimización de recorridos críticos, reducción de latencia y decisiones técnicas guiadas por consistencia en producción."
       },
       "integration": {
